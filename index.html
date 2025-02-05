@@ -1,1 +1,657 @@
-<!doctype html><html lang="en"><head><meta name="viewport" content="width=device-width,initial-scale=1"><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="Abdurrafay's Portfolio" content="Portfolio content"/><meta property="og:title" content="Abdurrafay Bin Khurram Portfolio"/><meta property="og:type" content="website"/><meta property="og:url" content="https://rafay-pk.github.io/"/><meta name="description" content="Abdurrafay's Personal Portfolio Website" property="og:description"><meta name="description" content="/icons/desc.png" property="og:image"><meta name="keywords" content="Abdurrafay, PortFolio, MasterPortfolio, Abdurrafay's Portfolio"/><meta name="author" content="Abdurrafay"/><meta name="application-name" content="Abdurrafay's PortFolio"/><link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="/icons//android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png"><link rel="manifest" href="/manifest.json"><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png"><meta name="theme-color" content="#000000"><script src="https://platform.linkedin.com/badges/js/profile.js" async defer="defer" type="text/javascript"></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-8856447829714090",enable_page_level_ads:!0})</script><script async src="https://www.googletagmanager.com/gtag/js?id=AW-825508380"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","AW-825508380")</script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-158726526-1"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-158726526-1")</script><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/font-awesome.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css"/><script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script><title>Abdurrafay's Portfolio</title><script defer="defer" src="/static/js/main.b514824d.js"></script><link href="/static/css/main.19f81fae.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Game Dev Portfolio" />
+    <title>Personal Game Dev Portfolio</title>
+    <style>
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .hover-shadow:hover {
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .project {
+            background-color: #f7f4ed; 
+            padding: 25px; 
+            border-radius: 15px; 
+            margin: 20px;
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        .project-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        .video-container {
+            flex: 0 0 500px;
+            aspect-ratio: 16/9;
+            min-height: 350px;
+            position: relative;
+        }
+        .video-container iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            border: none;
+        }
+
+        @media (max-width: 1350px) {
+            .project {
+                flex-direction: column;
+            }
+            .video-container {
+                flex: none;
+                width: 100%;
+                margin-top: 20px;
+                min-height: 0px;
+            }
+            .project-content {
+                min-width: 100%;
+            }
+        }
+        .project-title-container {
+            display: flex; 
+            justify-content: space-between; font-family:'Segoe UI';
+        }
+        .project-title {
+            margin-top: 0; 
+            font-weight: 1000;
+        }
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        .tag {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: white;
+        }
+        .tag-adventure { background-color: #90b6c9; }
+        .tag-api { background-color: #497a7b; }
+        .tag-application { background-color: #14357b; }
+        .tag-ar { background-color: #ce1d23; }
+        .tag-arcade { background-color: #5bb7e2; }
+        .tag-casual { background-color: #33cacf; }
+        .tag-company-associated { background-color: #c16f63; }
+        .tag-desktop { background-color: #955cca; }
+        .tag-face-recognition { background-color: #a63a62; }
+        .tag-fantasy { background-color: #95D5B2; }
+        .tag-freelance { background-color: #8ccbe7; }
+        .tag-game-maker { background-color: #3a3a3a; }
+        .tag-hobby { background-color: #94d264; }
+        .tag-hyper-casual { background-color: #f6866e; }
+        .tag-image-captioning { background-color: #6d1b45; }
+        .tag-medical { background-color: #078380; }
+        .tag-moba { background-color: #718678; }
+        .tag-mobile { background-color: #D65108; }
+        .tag-multiplayer { background-color: #952a8b; }
+        .tag-nft { background-color: #b4782f; }
+        .tag-puzzle { background-color: #b16892; }
+        .tag-python { background-color: #416fa0; }
+        .tag-racing { background-color: #FF8811; }
+        .tag-random-generator { background-color: #c7007b; }
+        .tag-retro { background-color: #FF6B6B; }
+        .tag-robot { background-color: #FF4D6D; }
+        .tag-rogue-like { background-color: #4ECDC4; }
+        .tag-rpg { background-color: #00ab58; }
+        .tag-runner { background-color: #fc6e3c; }
+        .tag-souls-like { background-color: #845EC2; }
+        .tag-splines { background-color: #4b79c6; }
+        .tag-sql-db { background-color: #5e3999; }
+        .tag-teamwork { background-color: #80d7d0; }
+        .tag-texturing { background-color: #fe0070; }
+        .tag-tool { background-color: #867975; }
+        .tag-tycoon { background-color: #FFD93D; }
+        .tag-ui { background-color: #ceb143; }
+        .tag-unity { background-color: #6e747c; }
+        .tag-post-apocalyptic { background-color: #fcae3b; }
+        .tag-unreal { background-color: #000000; }
+        .tag-vector-db { background-color: #8b0e03; }
+        .tag-vr { background-color: #8C4843; }
+        .tag-vrm { background-color: #f57597; }
+        .tag-web-app { background-color: #bc00a1; }
+        .tag-computer-vision { background-color: #ff5733; }
+        .tag-semantic-search { background-color: #ffcc00; }
+        .tag-dockerization { background-color: #0db7ed; }
+        .tag-cloud-deployment { background-color: #ff9900; }
+        .tag-clip-embeddings { background-color: #1a5c42; }
+        .tag-perforce-helix-vcs { background-color: #005f87; }
+        .tag-flask { background-color: #3356fb; }
+        .tag-blender { background-color: #f5792a; }
+        
+        .certificates-container {
+            display: flex;
+            gap: 20px;
+        }
+        .certificate {
+            border-radius: 20px;
+            flex: 1;
+            height: 500px;
+            min-height: 500px;
+        }
+        @media (max-width: 1000px) {
+            .certificates-container {
+                flex-direction: column;
+            }
+            .certificate {
+                width: 100%;
+            }
+        }
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 10px;
+            background-color: #25D366;
+            color: #f7f4ed;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1000;
+            transform: scale(0);
+            transition: transform 0.3s ease-in-out, background-color 0.2s;
+        }
+        #scrollToTopBtn.visible {
+            transform: scale(1);
+        }
+        #scrollToTopBtn:hover {
+            background-color: #1ebe5c;
+        }
+    </style>
+</head>
+<body style="background-color: #3b3b3b;">
+    <header style="margin-top:-10px; margin: 0px 5px; font-family:'Segoe UI'; background-color: #3b3b3b; color:#f7f4ed; text-align: left; display: flex; justify-content: space-between;">
+        <h1 id="header-title" style="padding: 10px; font-family: 'Segoe UI'; color: #f7f4ed; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Abdurrafay Bin Khurram</h1>
+        <section style="display: flex; gap: 5px;">
+            <a class="hover-shadow" href="https://github.com/rafay-pk" style="background-color: #15181f; padding: 10px 10px; border-radius: 12px; display: flex; align-items: center;">
+                <img src="https://img.icons8.com/?size=100&id=16318&format=png&color=f7f4ed" alt="Github Logo" style=" height: 30px;">
+            </a>
+            <a class="hover-shadow" href="https://linkedin.com/in/rafay-pk/" style="background-color: #265fbf; padding: 10px 10px; border-radius: 12px; display: flex; align-items: center;">
+                <img src="https://img.icons8.com/?size=100&id=98960&format=png&color=f7f4ed" alt="Linkedin Logo" style="height: 30px;">
+            </a>
+            <a id="contact-me" class="hover-shadow" href="https://wa.me/923365125515" style="background-color: #25D366; color: #f7f4ed; padding: 0px 10px; text-decoration: none; border-radius: 12px; display: flex; align-items: center; text-align: center; font-weight: 700;">
+                <img src="https://img.icons8.com/?size=100&id=16466&format=png&color=f7f4ed" alt="WhatsApp Logo" style="vertical-align: middle; margin-right: 5px; height: 30px;">
+                Contact Me
+            </a>
+        </section>
+    </header>
+    <script>
+        function updateHeaderTitle() {
+            const headerTitle = document.getElementById('header-title');
+            if (window.innerWidth <= 350) {
+                headerTitle.textContent = '';
+            } else if (window.innerWidth <= 400) {
+                headerTitle.textContent = 'R';
+            } else if (window.innerWidth <= 800) {
+                headerTitle.textContent = 'Rafay';
+            } else {
+                headerTitle.textContent = 'Abdurrafay Bin Khurram';
+            }
+        }
+        window.addEventListener('resize', updateHeaderTitle);
+        window.addEventListener('DOMContentLoaded', updateHeaderTitle);
+    </script>
+    <main style="font-family: JetBrainsMono Nerd Font Mono; ">
+        <section style="background-color: #000000; padding: 15px; margin-bottom: 15px; margin: auto; border-top-left-radius: 20px; border-top-right-radius: 20px;">
+            <section class="project">
+                <div class="project-content">
+                    <div class="project-title-container"><h2 class="project-title">UE_LOG(LogFileBio, Display, TEXT("A bit about me"))</h2> </div>
+                    <p class="typewriter">
+                    <strong>Hello World!</strong> I am a human *definitely not a robot* and to prove it, I've attached a picture of my very real, totally non-metallic face. <strong>Welcome to my little patch of digital dirt!</strong> Here, you'll find an assortment of my past projects which, albeit, are not as refined and diverse as I would like them to be, are still a testament to my fanaticism for video games and technical aptitude. I am a driven individual who found himself listening to a lecture on <strong>life-long learning</strong> and took it to heart. Whether it's fine-tuning game mechanics, optimizing code architecture for maximum robustness, or organizing my digital life with a borderline-OCD precision, I'm always pushing for efficiency, balance, and mastery in my skills. If getting things done means diving into DevOps, Web Development, Computer Vision, AI or any other domain that wasn't originally on my radar—so be it. I learn what I need to, and <strong>I make it work</strong>. Oh, almost forgot to mention, I am also a computer engineer with a cgpa of 3.25 (Because numbers matter too, right? ... Right?)
+                    </p>
+                    <div class="tags-container">
+                        <span class="tag tag-robot">Robot</span>
+                        <span class="tag tag-arcade">Arcade Games</span>
+                        <span class="tag tag-retro">Retro Games</span>
+                        <span class="tag tag-rogue-like">Rogue-like Games</span>
+                        <span class="tag tag-rpg">RPG Games</span>
+                        <span class="tag tag-souls-like">Souls-like Games</span>
+                        <span class="tag tag-tycoon">Tycoon Games</span>
+                        <span class="tag tag-puzzle">Puzzle Games</span>
+                        <span class="tag tag-racing">Racing Games</span>
+                        <span class="tag tag-adventure">Action Adventure Games</span>
+                        <span class="tag tag-multiplayer">Multiplayer FPS Games</span>
+                    </div>
+                </div>
+                <img src="assets/profile-picture.webp" alt="Profile Picture" style="aspect-ratio: 3/4; height: 350px; object-fit: cover; border-radius: 30px; align-self: center;">
+            </section>
+            <section class="project">
+                <div class="project-content">
+                    <div class="project-title-container"><h2 class="project-title">3D Models Asset Library</h2> <h2 style="margin-top: 0;">Jan 2025</h2></div>
+                    <p class="typewriter" style="white-space: pre-line"> As part of our mission at <a href="https://altroverse.ai">Altroverse</a> to build a fully automated pipeline that converts user prompts into photorealistic 3D scenes and then into synthetic datasets, we needed a high-quality asset library of 3D models. I started with <a href="https://objaverse.allenai.org/">Objaverse-XL</a>, a dataset of 10 million 3D assets, but many were low-quality, stylized, or unsuitable for realism. I tested an <a href="https://github.com/LAION-AI/aesthetic-predictor">aesthetic score predictor</a>, but it failed to filter out non-photorealistic models, so I developed a more hands-on approach.
+
+                    To classify assets, I wrote a script using the <a href="https://docs.blender.org/api/current/index.html">Blender Python API</a> that rendered each 3D model from all 4 angles and another script to clean and align them by unparenting, centering models, merging meshes, and repositioning origins to the bottom centers for proper ground up scaling. Working with <a href="https://www.linkedin.com/in/sualeh-hannan-08886a246/">Sualeh</a>, we built a web-based classification tool using PostgreSQL, sorting assets into High-Quality Models, Partial Models, Environments, and Don't Keep categories.
+
+                    Even after alignment, the models lacked real-world scale. To solve this, I used a Vision-Language Model (VLM) to generate captions for each model and an LLM to estimate dimensions based on that caption. To find the optimal architecture, I benchmarked multiple VLM-LLM pipelines, testing their ability to approximate correct scales with the least error.
+
+                    Instead of traditional category-based asset retrieval, I designed a <a href="https://github.com/openai/CLIP">CLIP</a>-powered vector search. By storing a single rendered image embedding of each model in a vector database, users can now query assets using natural language, embedding their search text into the same vector space for semantic retrieval without predefined categories.
+
+                    To make the asset library accessible to the team, I built a Flask backend to serve both renders and assets, handling query processing, asset retrieval, database management and frontend delivery from the cloud storage bucket, while Sualeh developed the React-based WebUI. This asset library is now a core part of our growing scene generation pipeline, enabling dynamic asset spawning from text prompts with unprecedented flexibility
+                    </p>
+                    <div class="tags-container">
+                        <span class="tag tag-python">Python</span>
+                        <span class="tag tag-blender">Blender</span>
+                        <span class="tag tag-flask">Flask</span>
+                        <span class="tag tag-api">API</span>
+                        <span class="tag tag-sql-db">SQL DB</span>
+                        <span class="tag tag-vector-db">Vector DB</span>
+                        <span class="tag tag-clip-embeddings">CLIP Embeddings</span>
+                        <span class="tag tag-semantic-search">Semantic Search</span>
+                        <span class="tag tag-dockerization">Dockerization</span>
+                        <span class="tag tag-web-app">Web</span>
+                        <span class="tag tag-application">Application</span>
+                        <span class="tag tag-cloud-deployment">Cloud Deployment</span>
+                    </div>
+                </div>
+                <div style="display: grid; max-width: 625px; align-self: center; grid-template-columns: repeat(1, 1fr); gap: 10px;">
+                    <a href="assets/assetlib1.webp" target="_blank">
+                        <img src="assets/assetlib1.webp" alt="Image 1" style="aspect-ratio: 18/9; width: 100%; object-fit: cover; border-radius: 10px;">
+                    </a>
+                    <a href="assets/assetlib2.webp" target="_blank">
+                        <img src="assets/assetlib2.webp" alt="Image 2" style="aspect-ratio: 18/9; width: 100%; object-fit: cover; border-radius: 10px;">
+                    </a>
+                    <a href="assets/assetlib3.webp" target="_blank">
+                        <img src="assets/assetlib3.webp" alt="Image 3" style="aspect-ratio: 18/9; width: 100%; object-fit: cover; border-radius: 10px;">
+                    </a>
+                </div></a>
+            </section>
+            <section class="project">
+                <div class="project-content">
+                    <div class="project-title-container"><h2 class="project-title">Synthetic Dataset for Background Separation <a href="https://drive.google.com/file/d/1vmCqwrVEjZKSGBZP1gEvhfBCl-3nf_Bz/view?usp=sharing"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2> <h2 style="margin-top: 0;">November 2024</h2></div>
+                    <p class="typewriter" style="white-space: pre-line">In this cutting-edge project at <a href="https://altroverse.ai">Altroverse</a>, I harnessed the power of Unreal Engine to generate a photorealistic synthetic dataset with precise annotations for training CNN models. Synthetic data annotation also offers a huge advantage—it's far more efficient than manually labeling real-world images. For this dataset, I focused on 3 key types of annotations:
+
+                    ➸ Depth Maps - Teaching AI to understand distances in a scene
+                    ➸ Semantic Segmentation - Differentiating categories of objects with an image
+                    ➸ Instance Segmentation - Distinguishing individual objects within categories
+
+                    To achieve highly realistic synthetic data, we utilized scene captures and post-process materials for the annotations. This pushed the boundaries of photorealism, ensuring the dataset closely mirrored real-world conditions. Since seamless collaboration was essential, I also set up Perforce version control across all office PCs, making teamwork smoother and eliminating versioning chaos. This project was an exciting fusion of gaming technology and AI research, reinforcing that Unreal Engine isn't just for games! 🚀
+                    </p>
+                    <div class="tags-container">
+                        <span class="tag tag-unreal">Unreal Engine</span>
+                        <span class="tag tag-python">Python</span>
+                        <span class="tag tag-computer-vision">Computer Vision</span>
+                        <span class="tag tag-perforce-helix-vcs">Perforce Helix VCS</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://youtube.com/embed/fTen8OBYIP4?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+            <section class="project">
+                <div class="project-content">
+                    <div class="project-title-container"><h2 class="project-title">Teramancers <a href="https://discord.gg/5T8z4WuVJM"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2> <h2 style="margin-top: 0;">Started Feb 2024</h2></div>
+                    <p class="typewriter" style="white-space: pre-line">While lurking on Discord, I met Mari, an insanely talented art student, who was trying to bring the charm of classic Pokémon games (think Gold, Silver, and Crystal) to life, and as someone who played through those gems at least 5 times, I knew I had to be a part of it.
+                    
+                    At its core, Teramancers is a retro-inspired monster-taming RPG with top-down pixel art and turn-based battles, but it's not just another Pokémon clone. What makes it different?
+
+                    ➸ 🎨 The Art & The Vision - The world and monster designs? All Mari. The programming? That's where I stepped in
+                    ➸ ⚔️ 4v4 battles - Teramancers has a unique twist on turn-based combat where the player fights alongside their monsters (Teraforms), and instead of each character having separate turns, all abilities draw from a shared pool of 
+                    ➸ 🎯 Action Points (AP)—forcing players to strategize across their whole team. Once both teams lock in their actions, every Teraform and player takes their turn from fastest to slowest, leading to a highly tactical, dynamic battle flow
+                    ➸ 🛠 The Tech Journey - I started by building an MVP in Unity, but pixel-perfect scaling was a nightmare. So, I took the plunge and switched to GameMaker, learning the engine from scratch to get the crisp retro aesthetic just right. The prototype started looking amazing, but life got busy, and I had to put the project on pause.
+
+                    </p>
+                    <div class="tags-container">
+                        <span class="tag tag-game-maker">Game Maker</span>
+                        <span class="tag tag-retro">Retro</span>
+                        <span class="tag tag-fantasy">Fantasy</span>
+                        <span class="tag tag-rpg">RPG</span>
+                        <span class="tag tag-adventure">Adventure</span>
+                        <span class="tag tag-hobby">Hobby</span>
+                        <span class="tag tag-teamwork">Teamwork</span>
+                        <span class="tag tag-desktop">Desktop</span>
+                    </div>
+                </div>
+                <div style="display: grid; max-width: 625px; align-self: center; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                    <a href="assets/teramancers1.webp" target="_blank">
+                        <img src="assets/teramancers1.webp" alt="Image 1" style="aspect-ratio: 10/9; width: 100%; object-fit: cover; border-radius: 30px;">
+                    </a>
+                    <a href="assets/teramancers2.webp" target="_blank">
+                        <img src="assets/teramancers2.webp" alt="Image 2" style="aspect-ratio: 10/9; width: 100%; object-fit: cover; border-radius: 30px;">
+                    </a>
+                    <a href="assets/teramancers3.webp" target="_blank">
+                        <img src="assets/teramancers3.webp" alt="Image 3" style="aspect-ratio: 10/9; width: 100%; object-fit: cover; border-radius: 30px;">
+                    </a>
+                    <a href="assets/teramancers4.webp" target="_blank">
+                        <img src="assets/teramancers4.webp" alt="Image 4" style="aspect-ratio: 10/9; width: 100%; object-fit: cover; border-radius: 30px;">
+                    </a>
+                </div>
+            </section>
+            <section class="project">
+                <div class="project-content">
+                    <div class="project-title-container"><h2 class="project-title">Plague Protocol <a href="https://discord.gg/uDPVSkqFrR"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2> <h2 style="margin-top: 0;">Started Jan 2024</h2></div>
+                    <p class="typewriter" style="white-space: pre-line">Ever heard of ApocZ? If you had an Xbox 360 and couldn't play DayZ (because it was PS-exclusive), then you might remember this janky-yet-charming open-world survival game. It had bad graphics, clunky gameplay, and somehow... an amazing community. Years later, a group of nostalgic players gathered on Discord, reminiscing about the good old days. That's when I thought—why not bring it back? With zero existing assets or documentation, I set out to rebuild ApocZ from scratch in Unreal Engine 5, reverse-engineering gameplay footage from the depths of YouTube. In the process, I leveled up my skills in:
+                        
+                    ➸ 🎮 Multiplayer Blueprinting for seamless PvPvE action
+                    ➸ 🌍 Procedural Terrain Generation to recreate that vast, abandoned island
+                    ➸ 🎨 Material Graphs & Animations to push UE5's graphical fidelity
+                    ➸ 🕺 Animation Blueprints & Montages for immersive character movement
+                    
+                    I started with a multiplayer FPS locomotion system that turned out great. Then came the weapons and inventory system. Combining logic, skeletal mesh sockets, animations, and UI turned into a monster of a task. As I struggled with blueprint organization, I realized I needed C++ for better structure and performance. Instead of hacking together messy workarounds, I made the tough call to scrap and restart the project. But with life getting busy, it's on pause—for now.
+                    </p>
+                    <div class="tags-container">
+                        <span class="tag tag-unreal">Unreal Engine</span>
+                        <span class="tag tag-multiplayer">Multiplayer</span>
+                        <span class="tag tag-rpg">RPG</span>
+                        <span class="tag tag-post-apocalyptic">Post-Apocalyptic</span>
+                        <span class="tag tag-hobby">Hobby</span>
+                        <span class="tag tag-desktop">Desktop</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://youtube.com/embed/FGVwp-KIRjg?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+            <section class="project">
+                <div class="project-content">
+                    <div class="project-title-container"><h2 class="project-title">Edenfell <a href="https://discord.com/invite/mH36c75V8P"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2> <h2 style="margin-top: 0;">Started Dec 2023</h2></div>
+                    <p class="typewriter" style="white-space: pre-line">Enter Edenfell, a post-apocalyptic high-fantasy warzone where magic, strategy, and skill collide! This isn't your typical MMO or MOBA—it's a brand-new genre: DAMS-RPG (Dynamic Arena Multiplayer Strategy RPG). Here, personalized avatars, intense combat, and strategic gameplay create a battlefield that's always evolving. Working with a fully remote team of Programmers, 2D & 3D Artists, Animators and Musicians spanning multiple countries, I contributed to key gameplay systems, including:
+
+                    ➸ 🤖 Enemy AI - Dynamic attack modes, Tracking, and Combat behaviors
+                    ➸ 🌍 Multiplayer Lobby - Teaming system, seamless connections
+                    ➸ 🕹️ Player Movement & Combat - Fluid 3rd Person controls, Networked  extensible animations
+                    ➸ 🏹 Weapons & Attack Combos - Melee/Ranged mechanics, Chaining attacks
+
+                    This project was a crash course in networked gameplay. I dove deep into Unity NGO (Netcode for GameObjects) and multiplayer topologies, learning how to build responsive, low-latency online combat distributing the logic between the server and the clients. With its huge scope and ambitious mechanics, Edenfell is still in development. While I had to step away due to other commitments, the team is pushing forward, and this game is shaping up to be something truly special. Keep an eye on it—this might just be the next big thing. 🚀
+                    </p>
+                    <div class="tags-container">
+                        <span class="tag tag-unity">Unity</span>
+                        <span class="tag tag-multiplayer">Multiplayer</span>
+                        <span class="tag tag-moba">MOBA</span>
+                        <span class="tag tag-rpg">RPG</span>
+                        <span class="tag tag-fantasy">Fantasy</span>
+                        <span class="tag tag-teamwork">Teamwork</span>
+                        <span class="tag tag-desktop">Desktop</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://youtube.com/embed/aFPMCzkkXR0?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+            <section class="project">
+                <div class="project-content">
+                    <div class="project-title-container"><h2 class="project-title">Image Search <a href="https://github.com/rafay-pk/image-search"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2> <h2 style="margin-top: 0;">May 2023</h2></div>
+                    <p class="typewriter" style="white-space: pre-line">Tired of big tech locking your media behind paywalls and cloud subscriptions? Image-Search is my <strong>open-source</strong> solution to that problem—a Google Photos-like experience but for local media on your desktop, built for privacy-conscious photographers, media studios, and power users who want full control over their files. Here's the key features:
+                    
+                    ➸ 📌 Smart Tagging - Manually label files or let AI do the work with facial recognition & image captioning
+                    ➸ 🔍 Advanced Search - Instantly find images based on people, objects, or descriptions
+                    ➸ 💾 Local-First Approach - No cloud, no subscriptions, just you and your data
+                    
+                    Built using PyQt6 for the UI and SQLite for storage, this was my final year project, and it earned me an A grade (GPA: 4.0/4.0) 🎉
+                    </p>
+                    <div class="tags-container">
+                        <span class="tag tag-tool">Tool</span>
+                        <span class="tag tag-python">Python</span>
+                        <span class="tag tag-sql-db">SQL</span>
+                        <span class="tag tag-image-captioning">Image Captioning</span>
+                        <span class="tag tag-face-recognition">Facial Recognition</span>
+                        <span class="tag tag-semantic-search">Semantic Search</span>
+                        <span class="tag tag-desktop">Desktop</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://youtube.com/embed/eZppKyn6dgE?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+            <section class="project">
+                <div class="project-content">
+                    <div class="project-title-container"><h2 class="project-title">Dungeon Survivor 2 <a href="https://drive.google.com/file/d/18eAiWKnl7aET8-CcAD7tGz-TUr5hhT4L/view?usp=sharing"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2> <h2 style="margin-top: 0;">March 2023</h2></div>
+                    <p class="typewriter" style="white-space: pre-line">During Winter Game Jam 2023 by <a href="https://mlabs.co/">MLABS</a>, my friends <a href="https://www.linkedin.com/in/mansoor-khan-a1b4101b9/">Mansoor</a>, <a href="https://www.linkedin.com/in/shaheer-khan-66a9251a7/">Shaheer</a>, <a href="https://www.linkedin.com/in/fatima-tuz-zahra-99b49b217/">Fatima</a>, and I—along with <a href="https://github.com/Sameer25-py">Sameer</a>, a senior dev from Tintash—set out to create a successor to Dungeon Survivor in just two weeks. With FYP presentations and tight deadlines, we faced plenty of challenges, especially with communication and time constraints. Despite the hurdles, we still managed to create a decent game with character, and it became a major learning experience. The Game Premise: An adventurer accidentally enters a forbidden dungeon and must solve timed puzzles to keep the torches lit and avoid being consumed by deadly beasts. Though we didn't make it past the selection phase for CPI testing, this project was a reminder that <strong>not everything I build will turn to gold</strong>, but each experience is a step forward in growth, teamwork, and adaptability. I worked on: 
+
+                    ➸ 🎮 Game Design & Project Management 
+                    ➸ 🗺️ Level Design & Team Integration
+                    ➸ 🕹️ Grid Movement, Doors & Switches, UI
+                    </p>
+                    <div class="tags-container">
+                        <span class="tag tag-unity">Unity</span>
+                        <span class="tag tag-arcade">Arcade</span>
+                        <span class="tag tag-puzzle">Puzzle</span>
+                        <span class="tag tag-adventure">Adventure</span>
+                        <span class="tag tag-teamwork">Teamwork</span>
+                        <span class="tag tag-mobile">Mobile</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://youtube.com/embed/ltBw--wu8Ho?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+            <section class="project">
+                <div class="project-content">
+                    <div class="project-title-container"><h2 class="project-title">LegendEHR <a href="https://legendehr.com/"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2> <h2 style="margin-top: 0;">December 2022</h2></div>
+                    <p class="typewriter" style="white-space: pre-line">This project was part of a larger team effort at <a href="https://risetech.ai/">RISETech</a>, where I built a 3D Model Viewer in Unity for a medical mobile and web app designed to assist doctors in clinical practice. Using a <strong>spherical coordinate system</strong>, I mapped touchscreen gestures to handle rotation, zoom, and pan functions seamlessly. Beyond navigation, we implemented:
+
+                    ➸ 🩺 An annotation system using raycasts for precise note-taking on 3D models
+                    ➸ 🔍 An outlining system by dividing the mesh of patient models into segments for better visual clarity
+
+                    The 3D models were developed by <a href="https://www.linkedin.com/in/mansoor-khan-a1b4101b9/">Mansoor</a>, while I focused on the Unity integration. To <strong>bridge Unity with Flutter</strong>, I developed an API with over 30 functions, handling everything from camera controls to annotation management. Each function was rigorously tested inside Unity, ensuring smooth two-way communication between the Flutter frontend and Unity backend. This project was an interesting mix of game dev, UI/UX design, and medical tech—a reminder that good engineering isn't about sticking to one domain but about making things work, no matter the field.
+                    </p>
+                    <div class="tags-container">
+                        <span class="tag tag-unity">Unity</span>
+                        <span class="tag tag-api">API</span>
+                        <span class="tag tag-mobile">Mobile</span>
+                        <span class="tag tag-web-app">Web</span>
+                        <span class="tag tag-medical">Medical</span>
+                        <span class="tag tag-application">Application</span>
+                        <span class="tag tag-teamwork">Teamwork</span>
+                        <span class="tag tag-company-associated">Company-Associated</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://youtube.com/embed/nJKJdV3Dvoo?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+            <section class="project">
+                <div class="project-content">
+                    <div class="project-title-container"><h2 class="project-title">Shape Race</h2> <h2 style="margin-top: 0;">Sep 2022</h2></div>
+                    <p class="typewriter">Shape Race was my ambitious attempt at launching a game on the Play Store and experimenting with the process. Did it make it there? Nope. But did I learn a ton along the way? Absolutely. At its core, Shape Race is a fast-paced arcade game where the speed ramps up the longer you play. Combine that with some hard turns and you've got a recipe for adrenaline-fueled chaos. Staying vigilant and reacting quickly is the only way to chase those high scores—and trust me, it gets intense. While working on this game, I dove headfirst into <strong>splines, object pooling, post-process effects</strong>, and crafting engaging player experiences. Each feature pushed my skills further, and though the game didn't hit the Play Store, it definitely left a mark on me.
+                    </p>
+                    <div class="tags-container">
+                        <span class="tag tag-unity">Unity</span>
+                        <span class="tag tag-runner">Runner</span>
+                        <span class="tag tag-splines">Splines</span>
+                        <span class="tag tag-casual">Casual</span>
+                        <span class="tag tag-hobby">Hobby</span>
+                        <span class="tag tag-mobile">Mobile</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://youtube.com/embed/8PXjyWaylKE?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+            <section class="project">
+                <div class="project-content">
+                    <div class="project-title-container"><h2 class="project-title">Combo Counter <a href="https://assetstore.unity.com/packages/tools/gui/combo-counter-system-217635"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2><h2 style="margin-top: 0;">June 2022</h2></div>
+                    <p class="typewriter">Ever wanted to spice up your game with slick combo counters and satisfying text popups? Well, I did—so I built a small but mighty Unity plugin that does just that! This arcade-style combo system lets you integrate multi-phase combo counters with optional text popups to give players instant feedback (because who doesn't love seeing flashy numbers go up?). For smooth animations, it plays nicely with both <a href="https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676">DOTween</a> and <a href="https://assetstore.unity.com/packages/tools/animation/leantween-3595">LeanTween</a>—the two heavyweights of Unity tweening. At one point, I considered writing my own tweening library to ditch external dependencies... but then I remembered scope creep is real, and this was meant to be a simple tool, not a full-blown engine rewrite. Priorities, right? 😅
+                    </p>
+                    <div class="tags-container">
+                        <span class="tag tag-unity">Unity</span>
+                        <span class="tag tag-tool">Tool</span>
+                        <span class="tag tag-ui">UI</span>
+                        <span class="tag tag-arcade">Arcade</span>
+                        <span class="tag tag-hobby">Hobby</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://youtube.com/embed/CXJkAt24LaU?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+            <section class="project">
+                <div class="project-content">
+                    <div class="project-title-container"><h2 class="project-title">VRM Batch Exporter</h2> <h2 style="margin-top: 0;">Dec 2021</h2></div>
+                    <p class="typewriter">When a startup needed to automate the creation of NFT 3D avatars in VRM format, they ran into a problem—there weren't many tools out there for the job. So, they reached out to me, and I whipped up a handy little script (with a UI, so let's call it semi-fancy). At its core, it's a simple for-loop that reads any texture file from the resources folder and applies it to a rigged 3D avatar—either individually or in bulk. But hey, just because it's simple doesn't mean it isn't effective! The UI lets you tweak settings, making the whole process smoother and a lot more user-friendly. Since VRM is a niche format, this was a fun challenge to figure out. If you want to see it in action, check out the video for a live demo of the generated avatars!</p>
+                    <div class="tags-container">
+                        <span class="tag tag-unity">Unity</span>
+                        <span class="tag tag-tool">Tool</span>
+                        <span class="tag tag-vrm">VRM</span>
+                        <span class="tag tag-nft">NFT</span>
+                        <span class="tag tag-freelance">Freelance</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://youtube.com/embed/BqE6-co8o8E?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+            <section class="project">
+                <div class="project-content">
+                    <div class="project-title-container"><h2 class="project-title">Rock, Paper, Scissors <a href="https://drive.google.com/file/d/1QWHYMfvdK5Mvr34Yp15mtbh9OLpp2JCD/view"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2> <h2 style="margin-top: 0;">July 2021</h2></div>
+                    <p class="typewriter" style="white-space: pre-line">During the final four weeks of my internship at <a href="http://www.mlabs.co/game-jams/rookie-game-jam-2021/">MLABS</a>, I took part in an intense game jam with over 300 participants—and what a wild ride it was! 🚀 From late-night brainstorming sessions to rapid prototyping, my team and I poured everything into bringing our idea to life. I naturally stepped into the role of group leader, working alongside my incredibly talented teammates, <a href="https://www.linkedin.com/in/aiyan-humayun">Aiyan</a> and <a href="https://www.linkedin.com/in/hajra-afzal-71b2601a4/">Hajra</a>. Thanks to our collective effort, we built our game swiftly and effectively, balancing creativity with execution. The submissions were judged on design and implementation (50%) and a marketing test (50%), where each game's Cost Per Install (CPI) was measured using a $150 ad budget. Not only did our game excel in both categories, but we also won the competition, earning the "<a href="https://www.linkedin.com/posts/mindstorm-studios_mindstormstudios-rookiegamejam2021-mlabs-activity-6861265000405725184-uZDn">Rookies of the Year</a>" title! 🏆 It was an unforgettable experience that reinforced my love for game development, teamwork, and making ideas come to life under pressure. My contributions included:
+                    
+                    ➸ 🎮 Game Design & Project Management 
+                    ➸ 🎨 Level Design & Hand Animations
+                    ➸ ⚙️ Event Systems, Player & NPC Controllers
+                    </p>
+                    <div class="tags-container">
+                        <span class="tag tag-unity">Unity</span>
+                        <span class="tag tag-hyper-casual">Hyper Casual</span>
+                        <span class="tag tag-runner">Runner</span>
+                        <span class="tag tag-teamwork">Teamwork</span>
+                        <span class="tag tag-mobile">Mobile</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://youtube.com/embed/f3kR06nOX-o?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+            <section class="project">
+                <div class="project-content">
+                    <div class="project-title-container"><h2 class="project-title">Dungeon Survivor <a href="https://drive.google.com/file/d/1QWHYMfvdK5Mvr34Yp15mtbh9OLpp2JCD/view"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2> <h2 style="margin-top: 0;">Nov 2020</h2></div>
+                    <p class="typewriter">I built this game from <strong>scratch!</strong> (well, aside from the textures, models, and music) as a semester project for my Computer Graphics course. It was during the COVID lockdown, so naturally, I spent an entire month doing nothing but working on this game—because what else was there to do? 😅 My goal was to recreate the movement mechanics from an old classic, Wonderland: Secret Worlds. I started with Unity's physics system—colliders, rigidbodies, the whole deal—only to quickly realize physics had other plans. The movement was unpredictable, janky, and just plain wrong. So, I did what any determined (or slightly stubborn) developer would do—I scrapped everything and rebuilt it from the ground up using C# arrays. Looking back, my code was... well, let's just say it violated several coding standards and possibly a few laws of nature. But this project was a major stepping stone in my journey. It taught me problem-solving, iteration, and the art of knowing when to throw your code in the trash and start over. And for that, I'm still proud of it.
+                    </p>
+                    <div class="tags-container">
+                        <span class="tag tag-unity">Unity</span>
+                        <span class="tag tag-puzzle">Puzzle</span>
+                        <span class="tag tag-adventure">Adventure</span>
+                        <span class="tag tag-desktop">Desktop</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://youtube.com/embed/jQCHvo8fi4o?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+            <section style="background-color: #f7f4ed; margin: 20px; padding: 20px; border-radius: 15px;">
+                <h2 class="project-title" style="font-family:'Segoe UI'">Specialization Certificates</h2>
+                <div class="certificates-container">
+                    <object class="certificate" data="assets/CourseraU59Z6X7TZEH9_compressed.pdf" type="application/pdf">
+                    </object>
+                    <object class="certificate" data="assets/CourseraEEA2LT6WCHT2_compressed.pdf" type="application/pdf">
+                    </object>
+                </div>
+            </section>
+        </section>
+    </main>
+    <button id="scrollToTopBtn" onclick="scrollToTop()">
+        <img src="https://img.icons8.com/?size=100&id=41199&format=png&color=f7f4ed" style="height: 40px;">
+    </button>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const paragraphs = document.querySelectorAll(".typewriter");
+      function startTypewriter(paragraph, originalHTML) {
+        paragraph.innerHTML = "";
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = originalHTML;
+        const queue = [];
+        function processNode(node) {
+          if (node.nodeType === 3) {
+            queue.push({
+              type: 'text',
+              content: node.textContent
+            });
+          } else if (node.nodeType === 1) {
+            queue.push({
+              type: 'element',
+              element: node.cloneNode(false)
+            });
+            if (node.childNodes.length > 0) {
+              queue.push({type: 'startChildren'});
+              Array.from(node.childNodes).forEach(child => processNode(child));
+              queue.push({type: 'endChildren'});
+            }
+          }
+        }
+        Array.from(tempDiv.childNodes).forEach(node => processNode(node));
+        let currentIndex = 0;
+        let elementStack = [paragraph];
+        function typeWriter() {
+          if (currentIndex < queue.length) {
+            const item = queue[currentIndex];
+            if (item.type === 'text') {
+              let i = 0;
+              function typeCharacter() {
+                if (i < item.content.length) {
+                  const currentParent = elementStack[elementStack.length - 1];
+                  currentParent.insertAdjacentText('beforeend', item.content[i]);
+                  i++;
+                  setTimeout(typeCharacter, 0);
+                } else {
+                  currentIndex++;
+                  typeWriter();
+                }
+              }
+              typeCharacter();
+            } else if (item.type === 'element') {
+              const currentParent = elementStack[elementStack.length - 1];
+              currentParent.appendChild(item.element);
+              elementStack.push(item.element);
+              currentIndex++;
+              typeWriter();
+            } else if (item.type === 'endChildren') {
+              elementStack.pop();
+              currentIndex++;
+              typeWriter();
+            } else if (item.type === 'startChildren') {
+              currentIndex++;
+              typeWriter();
+            }
+          }
+        }
+        typeWriter();
+      }
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const paragraph = entry.target;
+            const originalHTML = paragraph.dataset.fullHTML ?? paragraph.innerHTML;
+            startTypewriter(paragraph, originalHTML);
+            obs.unobserve(paragraph);
+          }
+        });
+      }, { threshold: 0.1 });
+      paragraphs.forEach(paragraph => {
+        paragraph.dataset.fullHTML = paragraph.innerHTML;
+        paragraph.innerHTML = "";
+        observer.observe(paragraph);
+      });
+    });
+    window.addEventListener("scroll", function() {
+      const btn = document.getElementById("scrollToTopBtn");
+      if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        btn.classList.add("visible");
+      } else {
+        btn.classList.remove("visible");
+      }
+    });
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    </script>
+</body>
+</html>
