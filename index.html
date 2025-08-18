@@ -1,38 +1,55 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal Game Dev Portfolio" />
     <title>Personal Game Dev Portfolio</title>
     <style>
+        @font-face {
+            font-family: 'JetBrainsMonoNLNerdFontPropo-Regular';
+            src: url('assets/fonts/JetBrainsMonoNLNerdFontPropo-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        html, body, h1, h2, h3, h4, h5, h6, p, a, span, div, button, section, header, main, .typewriter, .tags-container, .tag, .project-content {
+            font-family: 'JetBrainsMonoNLNerdFontPropo-Regular';
+        }
+
         header {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
+
         .hover-shadow:hover {
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
             transition: box-shadow 0.3s ease-in-out;
         }
+
         .project {
-            background-color: #f7f4ed; 
-            padding: 25px; 
-            border-radius: 15px; 
+            background-color: #f7f4ed;
+            padding: 25px;
+            border-radius: 15px;
             margin: 20px;
             display: flex;
             gap: 30px;
             align-items: flex-start;
         }
+
         .project-content {
             flex: 1;
             min-width: 300px;
         }
+
         .video-container {
             flex: 0 0 500px;
             aspect-ratio: 16/9;
             min-height: 350px;
             position: relative;
         }
+
         .video-container iframe {
             position: absolute;
             width: 100%;
@@ -45,36 +62,44 @@
             .project {
                 flex-direction: column;
             }
+
             .video-container {
                 flex: none;
                 width: 100%;
                 margin-top: 20px;
                 min-height: 0px;
             }
+
             .project-content {
                 min-width: 100%;
             }
         }
+
         .project-title-container {
-            display: flex; 
-            justify-content: space-between; font-family:'Segoe UI';
+            display: flex;
+            justify-content: space-between;
         }
+
         .project-title {
-            margin-top: 0; 
+            margin-top: 0;
             font-weight: 1000;
+            font-family: 'Segoe UI';
         }
+
         .tags-container {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
             margin-top: 15px;
         }
+
         .tag {
             padding: 5px 12px;
             border-radius: 20px;
             font-size: 14px;
             color: white;
         }
+
         .tag-adventure { background-color: #90b6c9; }
         .tag-api { background-color: #497a7b; }
         .tag-application { background-color: #14357b; }
@@ -109,6 +134,7 @@
         .tag-sql-db { background-color: #5e3999; }
         .tag-teamwork { background-color: #80d7d0; }
         .tag-texturing { background-color: #fe0070; }
+        .tag-third-person-shooter { background-color: #2e8bc0; }
         .tag-tool { background-color: #867975; }
         .tag-tycoon { background-color: #FFD93D; }
         .tag-ui { background-color: #ceb143; }
@@ -127,7 +153,7 @@
         .tag-perforce-helix-vcs { background-color: #005f87; }
         .tag-flask { background-color: #3356fb; }
         .tag-blender { background-color: #f5792a; }
-        
+
         #scrollToTopBtn {
             position: fixed;
             bottom: 30px;
@@ -142,26 +168,38 @@
             transform: scale(0);
             transition: transform 0.3s ease-in-out, background-color 0.2s;
         }
+
         #scrollToTopBtn.visible {
             transform: scale(1);
         }
+
         #scrollToTopBtn:hover {
             background-color: #1ebe5c;
         }
     </style>
 </head>
+
 <body style="background-color: #3b3b3b;">
-    <header style="margin-top:-10px; margin: 0px 5px; font-family:'Segoe UI'; background-color: #3b3b3b; color:#f7f4ed; text-align: left; display: flex; justify-content: space-between;">
-        <h1 id="header-title" style="padding: 10px; font-family: 'Segoe UI'; color: #f7f4ed; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Abdurrafay Bin Khurram</h1>
+    <header
+        style="margin-top:-10px; margin: 0px 5px; color:#f7f4ed; text-align: left; display: flex; justify-content: space-between;">
+        <h1 id="header-title"
+            style="padding: 10px; color: #f7f4ed; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family:'Segoe UI';">
+            Abdurrafay Bin Khurram</h1>
         <section style="display: flex; gap: 5px;">
-            <a class="hover-shadow" href="https://github.com/rafay-pk" style="background-color: #15181f; padding: 10px 10px; border-radius: 12px; display: flex; align-items: center;">
-                <img src="https://img.icons8.com/?size=100&id=16318&format=png&color=f7f4ed" alt="Github Logo" style=" height: 30px;">
+            <a class="hover-shadow" href="https://github.com/rafay-pk"
+                style="background-color: #15181f; padding: 10px 10px; border-radius: 12px; display: flex; align-items: center;">
+                <img src="https://img.icons8.com/?size=100&id=16318&format=png&color=f7f4ed" alt="Github Logo"
+                    style=" height: 30px;">
             </a>
-            <a class="hover-shadow" href="https://linkedin.com/in/rafay-pk/" style="background-color: #265fbf; padding: 10px 10px; border-radius: 12px; display: flex; align-items: center;">
-                <img src="https://img.icons8.com/?size=100&id=98960&format=png&color=f7f4ed" alt="Linkedin Logo" style="height: 30px;">
+            <a class="hover-shadow" href="https://linkedin.com/in/rafay-pk/"
+                style="background-color: #265fbf; padding: 10px 10px; border-radius: 12px; display: flex; align-items: center;">
+                <img src="https://img.icons8.com/?size=100&id=98960&format=png&color=f7f4ed" alt="Linkedin Logo"
+                    style="height: 30px;">
             </a>
-            <a id="contact-me" class="hover-shadow" href="https://wa.me/923365125515" style="background-color: #25D366; color: #f7f4ed; padding: 0px 10px; text-decoration: none; border-radius: 12px; display: flex; align-items: center; text-align: center; font-weight: 700;">
-                <img src="https://img.icons8.com/?size=100&id=16466&format=png&color=f7f4ed" alt="WhatsApp Logo" style="vertical-align: middle; margin-right: 5px; height: 30px;">
+            <a id="contact-me" class="hover-shadow" href="https://wa.me/923395339335"
+                style="background-color: #25D366; color: #f7f4ed; padding: 0px 10px; text-decoration: none; border-radius: 12px; display: flex; align-items: center; text-align: center; font-weight: 700; font-family:'Segoe UI';">
+                <img src="https://img.icons8.com/?size=100&id=16466&format=png&color=f7f4ed" alt="WhatsApp Logo"
+                    style="vertical-align: middle; margin-right: 5px; height: 30px;">
                 Contact Me
             </a>
         </section>
@@ -182,40 +220,115 @@
         window.addEventListener('resize', updateHeaderTitle);
         window.addEventListener('DOMContentLoaded', updateHeaderTitle);
     </script>
-    <main style="font-family: JetBrainsMono Nerd Font Mono; ">
-        <section style="background-color: #000000; padding: 15px; margin-bottom: 15px; margin: auto; border-top-left-radius: 20px; border-top-right-radius: 20px;">
+    <main>
+        <section
+            style="background-color: #000000; padding: 15px; margin-bottom: 15px; margin: auto; border-top-left-radius: 20px; border-top-right-radius: 20px;">
             <section class="project">
                 <div class="project-content">
-                    <div class="project-title-container"><h2 class="project-title">UE_LOG(LogFileBio, Display, TEXT("A bit about me"))</h2> </div>
-                    <p class="typewriter">
-                    <strong>Hello World!</strong> I am a human *definitely not a robot* and to prove it, I've attached a picture of my very real, totally non-metallic face. <strong>Welcome to my little patch of digital dirt!</strong> Here, you'll find an assortment of my past projects which, albeit, are not as refined and diverse as I would like them to be, are still a testament to my fanaticism for video games and technical aptitude. I am a driven individual who found himself listening to a lecture on <strong>life-long learning</strong> and took it to heart. Whether it's fine-tuning game mechanics, optimizing code architecture for maximum robustness, or organizing my digital life with a borderline-OCD precision, I'm always pushing for efficiency, balance, and mastery in my skills. If getting things done means diving into DevOps, Web Development, Computer Vision, AI or any other domain that wasn't originally on my radar—so be it. I learn what I need to, and <strong>I make it work</strong>. Oh, almost forgot to mention, I am also a computer engineer with a cgpa of 3.25 (Because numbers matter too, right? ... Right?)
-                    </p>
-                    <div class="tags-container">
-                        <span class="tag tag-robot">Robot</span>
-                        <span class="tag tag-arcade">Arcade Games</span>
-                        <span class="tag tag-retro">Retro Games</span>
-                        <span class="tag tag-rogue-like">Rogue-like Games</span>
-                        <span class="tag tag-rpg">RPG Games</span>
-                        <span class="tag tag-souls-like">Souls-like Games</span>
-                        <span class="tag tag-tycoon">Tycoon Games</span>
-                        <span class="tag tag-puzzle">Puzzle Games</span>
-                        <span class="tag tag-racing">Racing Games</span>
-                        <span class="tag tag-adventure">Action Adventure Games</span>
-                        <span class="tag tag-multiplayer">Multiplayer FPS Games</span>
+                    <div class="project-title-container">
+                        <h2 class="project-title" style=" background: #23272e; color: #e6e6e6; font-family: 'JetBrainsMonoNLNerdFontPropo-Bold', 'Fira Mono', 'Consolas', 'monospace'; padding: 12px 18px; border-radius: 10px; font-size: 1.1em; font-weight: 700; box-shadow: 0 2px 12px rgba(0,0,0,0.18); margin-bottom: 0; margin-top: 0; letter-spacing: 0.5px; border: 1px solid #363b44; display: inline-block; word-break: break-all;">
+                            <span style="color:#56b6c2;">UE_LOG</span><span style="color:#abb2bf;">(</span><span
+                                style="color:#e5c07b;">LogFileBio</span><span style="color:#abb2bf;">, </span><span
+                                style="color:#61afef;">Display</span><span style="color:#abb2bf;">, </span><span
+                                style="color:#98c379;">TEXT</span><span style="color:#abb2bf;">(</span><span
+                                style="color:#d19a66;">&quot;A bit about me&quot;</span><span
+                                style="color:#abb2bf;">));</span>
+                        </h2>
                     </div>
+                    <p class="typewriter">
+                        <strong>Hello World!</strong> I am a human *definitely not a robot* and to prove it, I've attached a picture of my very real, totally non-metallic face. <strong>Welcome to my little patch of digital dirt!</strong> Here, you'll find an assortment of my past projects which, albeit, are not as refined and diverse as I would like them to be, are still a testament to my fanaticism for video games and technical aptitude. I am a driven individual who found himself listening to a lecture on <strong>life-long learning</strong> and took it to heart. Whether it's fine-tuning game mechanics, optimizing code architecture for maximum robustness, or organizing my digital life with a borderline-OCD precision, I'm always pushing for efficiency, balance, and mastery in my skills. If getting things done means diving into DevOps, Web Development, Computer Vision, AI or any other domain that wasn't originally on my radar—so be it. I learn what I need to, and <strong>I make it work</strong>. Oh, almost forgot to mention, I am also a computer engineer from NUST with a cgpa of 3.25 (Because grades matter too, right? ... Right??)
+                    </p>
+                    <button
+                        onclick="document.getElementById('game-collection-controls').scrollIntoView({ behavior: 'smooth' });"
+                        style="margin-top: 18px; background-color: #000000; color: #fff; padding: 10px 22px; border: none; border-radius: 20px; font-size: 1em; font-weight: 700; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.13);">
+                        ↓ Jump to My Favorite Games
+                    </button>
                 </div>
-                <img src="assets/profile-picture.webp" alt="Profile Picture" style="aspect-ratio: 3/4; height: 350px; object-fit: cover; border-radius: 30px; align-self: center;">
+                <img src="assets/profile-picture.webp" alt="Profile Picture"
+                    style="aspect-ratio: 3/4; height: 350px; object-fit: cover; border-radius: 30px; align-self: center;">
             </section>
             <section class="project">
                 <div class="project-content">
-                    <div class="project-title-container"><h2 class="project-title">3D Models Asset Library</h2> <h2 style="margin-top: 0;">Jan 2025</h2></div>
+                        <div class="project-title-container">
+                            <h2 class="project-title">Dental Caries Placement Tool <a
+                                href="https://drive.google.com/file/d/1rsOh8QOvgG6UPJ3Q2XsETijXoBiLxI1p/view?usp=drive_link"><img
+                                    src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9"
+                                    width="20" height="20" style="color: #028dff;"></a></h2>
+                            <h2 style="margin-top: 0;">June 2025</h2>
+                        </div>
+                        <p class="typewriter" style="white-space: pre-line">
+                            Developed as a freelance project using Scene Captures in Unreal Engine, this tool is designed to assist dentists in accurately placing dental caries on 3D teeth models. It features a user-friendly interface that allows dentists to 
+                            
+                            ➸ Place teeth and carries
+                            ➸ Adjust their sizes and depth
+                            ➸ Hide and show them individually or collectively
+                            ➸ Visualize the results in 4 different viewing modes; BaseColor, Depth, Normal and Final Color
+                            
+                            The tool also includes a library of common caries types for quick access and options to import custom models at runtime using <a href="https://github.com/rdeioris/glTFRuntime">gltfRuntime</a>. It also includes a plethora of customizable options that are saved to/loaded from disk and also the ability to save screenshots from any of the viewing modes to disk.
+                        </p>
+                    <div class="tags-container">
+                        <span class="tag tag-unreal">Unreal Engine</span>
+                        <span class="tag tag-tool">Tool</span>
+                        <span class="tag tag-desktop">Desktop</span>
+                        <span class="tag tag-application">Application</span>
+                        <span class="tag tag-ui">UI</span>
+                        <span class="tag tag-freelance">Freelance</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://youtube.com/embed/vDjb3-ITd_Q?loop=1&modestbranding=1&iv_load_policy=3"
+                        loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+            <section class="project">
+                <div class="project-content">
+                        <div class="project-title-container">
+                            <h2 class="project-title">TPS Template using Game Animation Sample Project <a
+                                href="https://drive.google.com/file/d/1P1J0ragheWa_Dx9FmHAAffNoL1z3jIhc/view?usp=drive_link"><img
+                                    src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9"
+                                    width="20" height="20" style="color: #028dff;"></a></h2>
+                            <h2 style="margin-top: 0;">May 2025</h2>
+                        </div>
+                        <p class="typewriter" style="white-space: pre-line">Built as a flexible foundation for third-person shooters, this project started as an experiment with Unreal's Game Animation Sample 🏃🏼💨 and quickly grew into a full-featured template for rapid prototyping
+
+                        ➸ Main menu and character selection with animated UI, camera transitions and SFX
+                        ➸ Three unique classes: Assassin, Gunner, Tank; each with distinct scale and health
+                        ➸ TDM map with three lanes, spawn areas, and bots that use perception, take cover and reload
+                        ➸ Full weapon arsenal: pistol, SMG, AR, LMG (with mobility restrictions), shotgun; each with unique damage, procedural character recoil, and firing modes (semi, burst, auto) and headshot multipliers
+                        ➸ ADS Integration into the animation blueprint with direction feedback and limiters for automatically turning in place in case the player starts firing behind themselves
+                        ➸ Melee combos with root-motion animations, hit reactions, and sound effects
+                        ➸ Shields with four recovery stages and visual feedback (SFX, VFX, UI)
+                        ➸ Refined gameplay systems: aim sensitivity, match timer, respawn, score tracking, and dynamic crosshair
+
+                        From animation tweaks to AI overhauls, every feature was built, tested, broken, and rebuilt—making this template a true playground for learning and iteration.
+                            </p>
+                    <div class="tags-container">
+                        <span class="tag tag-unreal">Unreal Engine</span>
+                        <span class="tag tag-desktop">Desktop</span>
+                        <span class="tag tag-third-person-shooter">Third Person Shooter</span>
+                        <span class="tag tag-company-associated">Company Associated</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://youtube.com/embed/gTJF-MVUxmQ?loop=1&modestbranding=1&iv_load_policy=3"
+                        loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+            <section class="project">
+                <div class="project-content">
+                    <div class="project-title-container">
+                        <h2 class="project-title">3D Models Asset Library</h2>
+                        <h2 style="margin-top: 0;">Jan 2025</h2>
+                    </div>
                     <p class="typewriter" style="white-space: pre-line"> As part of our mission at <a href="https://altroverse.ai">Altroverse</a> to build a fully automated pipeline that converts user prompts into photorealistic 3D scenes and then into synthetic datasets, we needed a high-quality asset library of 3D models. I started with <a href="https://objaverse.allenai.org/">Objaverse-XL</a>, a dataset of 10 million 3D assets, but many were low-quality, stylized, or unsuitable for realism. I tested an <a href="https://github.com/LAION-AI/aesthetic-predictor">aesthetic score predictor</a>, but it failed to filter out non-photorealistic models, so I developed a more hands-on approach.
 
                     To classify assets, I wrote a script using the <a href="https://docs.blender.org/api/current/index.html">Blender Python API</a> that rendered each 3D model from all 4 angles and another script to clean and align them by unparenting, centering models, merging meshes, and repositioning origins to the bottom centers for proper ground up scaling. Working with <a href="https://www.linkedin.com/in/sualeh-hannan-08886a246/">Sualeh</a>, we built a web-based classification tool using PostgreSQL, sorting assets into High-Quality Models, Partial Models, Environments, and Don't Keep categories.
 
                     Even after alignment, the models lacked real-world scale. To solve this, I used a Vision-Language Model (VLM) to generate captions for each model and an LLM to estimate dimensions based on that caption. To find the optimal architecture, I benchmarked multiple VLM-LLM pipelines, testing their ability to approximate correct scales with the least error.
 
-                    Instead of traditional category-based asset retrieval, I designed a <a href="https://github.com/openai/CLIP">CLIP</a>-powered vector search. By storing a single rendered image embedding of each model in a vector database, users can now query assets using natural language, embedding their search text into the same vector space for semantic retrieval without predefined categories.
+                    Instead of traditional category-based asset retrieval, I designed a <a href="https://github.com/openai/CLIP">CLIP</a>-powered vector search.  By storing a single rendered image embedding of each model in a vector database, users can now query assets using natural language, just like google image search, embedding their search text into the same vector space for semantic retrieval without predefined categories.
 
                     To make the asset library accessible to the team, I built a Flask backend to serve both renders and assets, handling query processing, asset retrieval, database management and frontend delivery from the cloud storage bucket, while Sualeh developed the React-based WebUI. This asset library is now a core part of our growing scene generation pipeline, enabling dynamic asset spawning from text prompts with unprecedented flexibility
                     </p>
@@ -232,23 +345,34 @@
                         <span class="tag tag-web-app">Web</span>
                         <span class="tag tag-application">Application</span>
                         <span class="tag tag-cloud-deployment">Cloud Deployment</span>
+                        <span class="tag tag-company-associated">Company Associated</span>
                     </div>
                 </div>
-                <div style="display: grid; max-width: 625px; align-self: center; grid-template-columns: repeat(1, 1fr); gap: 10px;">
-                    <a href="assets/assetlib1.webp" target="_blank">
-                        <img src="assets/assetlib1.webp" alt="Image 1" style="aspect-ratio: 18/9; width: 100%; object-fit: cover; border-radius: 10px;">
+                <div
+                    style="display: grid; max-width: 625px; align-self: center; grid-template-columns: repeat(1, 1fr); gap: 10px;">
+                    <a href="assets/projects/assetlib1.webp" target="_blank">
+                        <img src="assets/projects/assetlib1.webp" alt="Image 1"
+                            style="aspect-ratio: 18/9; width: 100%; object-fit: cover; border-radius: 10px;">
                     </a>
-                    <a href="assets/assetlib2.webp" target="_blank">
-                        <img src="assets/assetlib2.webp" alt="Image 2" style="aspect-ratio: 18/9; width: 100%; object-fit: cover; border-radius: 10px;">
+                    <a href="assets/projects/assetlib2.webp" target="_blank">
+                        <img src="assets/projects/assetlib2.webp" alt="Image 2"
+                            style="aspect-ratio: 18/9; width: 100%; object-fit: cover; border-radius: 10px;">
                     </a>
-                    <a href="assets/assetlib3.webp" target="_blank">
-                        <img src="assets/assetlib3.webp" alt="Image 3" style="aspect-ratio: 18/9; width: 100%; object-fit: cover; border-radius: 10px;">
+                    <a href="assets/projects/assetlib3.webp" target="_blank">
+                        <img src="assets/projects/assetlib3.webp" alt="Image 3"
+                            style="aspect-ratio: 18/9; width: 100%; object-fit: cover; border-radius: 10px;">
                     </a>
                 </div></a>
             </section>
             <section class="project">
                 <div class="project-content">
-                    <div class="project-title-container"><h2 class="project-title">Synthetic Dataset for Background Separation <a href="https://drive.google.com/file/d/1vmCqwrVEjZKSGBZP1gEvhfBCl-3nf_Bz/view?usp=sharing"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2> <h2 style="margin-top: 0;">November 2024</h2></div>
+                    <div class="project-title-container">
+                        <h2 class="project-title">Synthetic Dataset for Background Separation <a
+                                href="https://drive.google.com/file/d/1vmCqwrVEjZKSGBZP1gEvhfBCl-3nf_Bz/view?usp=sharing"><img
+                                    src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9"
+                                    width="20" height="20" style="color: #028dff;"></a></h2>
+                        <h2 style="margin-top: 0;">November 2024</h2>
+                    </div>
                     <p class="typewriter" style="white-space: pre-line">In this cutting-edge project at <a href="https://altroverse.ai">Altroverse</a>, I harnessed the power of Unreal Engine to generate a photorealistic synthetic dataset with precise annotations for training CNN models. Synthetic data annotation also offers a huge advantage—it's far more efficient than manually labeling real-world images. For this dataset, I focused on 3 key types of annotations:
 
                     ➸ Depth Maps - Teaching AI to understand distances in a scene
@@ -262,25 +386,31 @@
                         <span class="tag tag-python">Python</span>
                         <span class="tag tag-computer-vision">Computer Vision</span>
                         <span class="tag tag-perforce-helix-vcs">Perforce Helix VCS</span>
+                        <span class="tag tag-company-associated">Company Associated</span>
                     </div>
                 </div>
                 <div class="video-container">
-                    <iframe src="https://youtube.com/embed/fTen8OBYIP4?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    <iframe src="https://youtube.com/embed/fTen8OBYIP4?loop=1&modestbranding=1&iv_load_policy=3"
+                        loading="lazy" allow="picture-in-picture" allowfullscreen>
                     </iframe>
                 </div>
             </section>
             <section class="project">
                 <div class="project-content">
-                    <div class="project-title-container"><h2 class="project-title">Teramancers <a href="https://discord.gg/5T8z4WuVJM"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2> <h2 style="margin-top: 0;">Started Feb 2024</h2></div>
+                    <div class="project-title-container">
+                        <h2 class="project-title">Teramancers <a href="https://discord.gg/5T8z4WuVJM"><img
+                                    src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9"
+                                    width="20" height="20" style="color: #028dff;"></a></h2>
+                        <h2 style="margin-top: 0;">Started Feb 2024</h2>
+                    </div>
                     <p class="typewriter" style="white-space: pre-line">While lurking on Discord, I met Mari, an insanely talented art student, who was trying to bring the charm of classic Pokémon games (think Gold, Silver, and Crystal) to life, and as someone who played through those gems at least 5 times, I knew I had to be a part of it.
-                    
+
                     At its core, Teramancers is a retro-inspired monster-taming RPG with top-down pixel art and turn-based battles, but it's not just another Pokémon clone. What makes it different?
 
                     ➸ 🎨 The Art & The Vision - The world and monster designs? All Mari. The programming? That's where I stepped in
-                    ➸ ⚔️ 4v4 battles - Teramancers has a unique twist on turn-based combat where the player fights alongside their monsters (Teraforms), and instead of each character having separate turns, all abilities draw from a shared pool of 
+                    ➸ ⚔️ 4v4 battles - Teramancers has a unique twist on turn-based combat where the player fights alongside their monsters (Teraforms), and instead of each character having separate turns, all abilities draw from a shared pool of
                     ➸ 🎯 Action Points (AP)—forcing players to strategize across their whole team. Once both teams lock in their actions, every Teraform and player takes their turn from fastest to slowest, leading to a highly tactical, dynamic battle flow
                     ➸ 🛠 The Tech Journey - I started by building an MVP in Unity, but pixel-perfect scaling was a nightmare. So, I took the plunge and switched to GameMaker, learning the engine from scratch to get the crisp retro aesthetic just right. The prototype started looking amazing, but life got busy, and I had to put the project on pause.
-
                     </p>
                     <div class="tags-container">
                         <span class="tag tag-game-maker">Game Maker</span>
@@ -293,31 +423,41 @@
                         <span class="tag tag-desktop">Desktop</span>
                     </div>
                 </div>
-                <div style="display: grid; max-width: 625px; align-self: center; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-                    <a href="assets/teramancers1.webp" target="_blank">
-                        <img src="assets/teramancers1.webp" alt="Image 1" style="aspect-ratio: 10/9; width: 100%; object-fit: cover; border-radius: 30px;">
+                <div
+                    style="display: grid; max-width: 625px; align-self: center; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                    <a href="assets/projects/teramancers1.webp" target="_blank">
+                        <img src="assets/projects/teramancers1.webp" alt="Image 1"
+                            style="aspect-ratio: 10/9; width: 100%; object-fit: cover; border-radius: 30px;">
                     </a>
-                    <a href="assets/teramancers2.webp" target="_blank">
-                        <img src="assets/teramancers2.webp" alt="Image 2" style="aspect-ratio: 10/9; width: 100%; object-fit: cover; border-radius: 30px;">
+                    <a href="assets/projects/teramancers2.webp" target="_blank">
+                        <img src="assets/projects/teramancers2.webp" alt="Image 2"
+                            style="aspect-ratio: 10/9; width: 100%; object-fit: cover; border-radius: 30px;">
                     </a>
-                    <a href="assets/teramancers3.webp" target="_blank">
-                        <img src="assets/teramancers3.webp" alt="Image 3" style="aspect-ratio: 10/9; width: 100%; object-fit: cover; border-radius: 30px;">
+                    <a href="assets/projects/teramancers3.webp" target="_blank">
+                        <img src="assets/projects/teramancers3.webp" alt="Image 3"
+                            style="aspect-ratio: 10/9; width: 100%; object-fit: cover; border-radius: 30px;">
                     </a>
-                    <a href="assets/teramancers4.webp" target="_blank">
-                        <img src="assets/teramancers4.webp" alt="Image 4" style="aspect-ratio: 10/9; width: 100%; object-fit: cover; border-radius: 30px;">
+                    <a href="assets/projects/teramancers4.webp" target="_blank">
+                        <img src="assets/projects/teramancers4.webp" alt="Image 4"
+                            style="aspect-ratio: 10/9; width: 100%; object-fit: cover; border-radius: 30px;">
                     </a>
                 </div>
             </section>
             <section class="project">
                 <div class="project-content">
-                    <div class="project-title-container"><h2 class="project-title">Plague Protocol <a href="https://discord.gg/uDPVSkqFrR"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2> <h2 style="margin-top: 0;">Started Jan 2024</h2></div>
+                    <div class="project-title-container">
+                        <h2 class="project-title">Plague Protocol <a href="https://discord.gg/uDPVSkqFrR"><img
+                                    src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9"
+                                    width="20" height="20" style="color: #028dff;"></a></h2>
+                        <h2 style="margin-top: 0;">Started Jan 2024</h2>
+                    </div>
                     <p class="typewriter" style="white-space: pre-line">Ever heard of ApocZ? If you had an Xbox 360 and couldn't play DayZ (because it was PS-exclusive), then you might remember this janky-yet-charming open-world survival game. It had bad graphics, clunky gameplay, and somehow... an amazing community. Years later, a group of nostalgic players gathered on Discord, reminiscing about the good old days. That's when I thought—why not bring it back? With zero existing assets or documentation, I set out to rebuild ApocZ from scratch in Unreal Engine 5, reverse-engineering gameplay footage from the depths of YouTube. In the process, I leveled up my skills in:
-                        
+
                     ➸ 🎮 Multiplayer Blueprinting for seamless PvPvE action
                     ➸ 🌍 Procedural Terrain Generation to recreate that vast, abandoned island
                     ➸ 🎨 Material Graphs & Animations to push UE5's graphical fidelity
                     ➸ 🕺 Animation Blueprints & Montages for immersive character movement
-                    
+
                     I started with a multiplayer FPS locomotion system that turned out great. Then came the weapons and inventory system. Combining logic, skeletal mesh sockets, animations, and UI turned into a monster of a task. As I struggled with blueprint organization, I realized I needed C++ for better structure and performance. Instead of hacking together messy workarounds, I made the tough call to scrap and restart the project. But with life getting busy, it's on pause—for now.
                     </p>
                     <div class="tags-container">
@@ -330,18 +470,24 @@
                     </div>
                 </div>
                 <div class="video-container">
-                    <iframe src="https://youtube.com/embed/FGVwp-KIRjg?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    <iframe src="https://youtube.com/embed/FGVwp-KIRjg?loop=1&modestbranding=1&iv_load_policy=3"
+                        loading="lazy" allow="picture-in-picture" allowfullscreen>
                     </iframe>
                 </div>
             </section>
             <section class="project">
                 <div class="project-content">
-                    <div class="project-title-container"><h2 class="project-title">Edenfell <a href="https://discord.com/invite/mH36c75V8P"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2> <h2 style="margin-top: 0;">Started Dec 2023</h2></div>
+                    <div class="project-title-container">
+                        <h2 class="project-title">Edenfell <a href="https://discord.com/invite/mH36c75V8P"><img
+                                    src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9"
+                                    width="20" height="20" style="color: #028dff;"></a></h2>
+                        <h2 style="margin-top: 0;">Started Dec 2023</h2>
+                    </div>
                     <p class="typewriter" style="white-space: pre-line">Enter Edenfell, a post-apocalyptic high-fantasy warzone where magic, strategy, and skill collide! This isn't your typical MMO or MOBA—it's a brand-new genre: DAMS-RPG (Dynamic Arena Multiplayer Strategy RPG). Here, personalized avatars, intense combat, and strategic gameplay create a battlefield that's always evolving. Working with a fully remote team of Programmers, 2D & 3D Artists, Animators and Musicians spanning multiple countries, I contributed to key gameplay systems, including:
 
                     ➸ 🤖 Enemy AI - Dynamic attack modes, Tracking, and Combat behaviors
                     ➸ 🌍 Multiplayer Lobby - Teaming system, seamless connections
-                    ➸ 🕹️ Player Movement & Combat - Fluid 3rd Person controls, Networked  extensible animations
+                    ➸ 🕹️ Player Movement & Combat - Fluid 3rd Person controls, Networked extensible animations
                     ➸ 🏹 Weapons & Attack Combos - Melee/Ranged mechanics, Chaining attacks
 
                     This project was a crash course in networked gameplay. I dove deep into Unity NGO (Netcode for GameObjects) and multiplayer topologies, learning how to build responsive, low-latency online combat distributing the logic between the server and the clients. With its huge scope and ambitious mechanics, Edenfell is still in development. While I had to step away due to other commitments, the team is pushing forward, and this game is shaping up to be something truly special. Keep an eye on it—this might just be the next big thing. 🚀
@@ -357,19 +503,26 @@
                     </div>
                 </div>
                 <div class="video-container">
-                    <iframe src="https://youtube.com/embed/aFPMCzkkXR0?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    <iframe src="https://youtube.com/embed/aFPMCzkkXR0?loop=1&modestbranding=1&iv_load_policy=3"
+                        loading="lazy" allow="picture-in-picture" allowfullscreen>
                     </iframe>
                 </div>
             </section>
             <section class="project">
                 <div class="project-content">
-                    <div class="project-title-container"><h2 class="project-title">Image Search <a href="https://github.com/rafay-pk/image-search"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2> <h2 style="margin-top: 0;">May 2023</h2></div>
+                    <div class="project-title-container">
+                        <h2 class="project-title">Image Search <a href="https://github.com/rafay-pk/image-search"><img
+                                    src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9"
+                                    width="20" height="20" style="color: #028dff;"></a></h2>
+                        <h2 style="margin-top: 0;">May 2023</h2>
+                    </div>
                     <p class="typewriter" style="white-space: pre-line">Tired of big tech locking your media behind paywalls and cloud subscriptions? Image-Search is my <strong>open-source</strong> solution to that problem—a Google Photos-like experience but for local media on your desktop, built for privacy-conscious photographers, media studios, and power users who want full control over their files. Here's the key features:
-                    
-                    ➸ 📌 Smart Tagging - Manually label files or let AI do the work with facial recognition & image captioning
+
+                    ➸ 📌 Smart Tagging - Manually label files or let AI do the work with facial recognition & image
+                    captioning
                     ➸ 🔍 Advanced Search - Instantly find images based on people, objects, or descriptions
                     ➸ 💾 Local-First Approach - No cloud, no subscriptions, just you and your data
-                    
+
                     Built using PyQt6 for the UI and SQLite for storage, this was my final year project, and it earned me an A grade (GPA: 4.0/4.0) 🎉
                     </p>
                     <div class="tags-container">
@@ -383,16 +536,27 @@
                     </div>
                 </div>
                 <div class="video-container">
-                    <iframe src="https://youtube.com/embed/eZppKyn6dgE?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    <iframe src="https://youtube.com/embed/eZppKyn6dgE?loop=1&modestbranding=1&iv_load_policy=3"
+                        loading="lazy" allow="picture-in-picture" allowfullscreen>
                     </iframe>
                 </div>
             </section>
             <section class="project">
                 <div class="project-content">
-                    <div class="project-title-container"><h2 class="project-title">Dungeon Survivor 2 <a href="https://drive.google.com/file/d/18eAiWKnl7aET8-CcAD7tGz-TUr5hhT4L/view?usp=sharing"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2> <h2 style="margin-top: 0;">March 2023</h2></div>
-                    <p class="typewriter" style="white-space: pre-line">During Winter Game Jam 2023 by <a href="https://mlabs.co/">MLABS</a>, my friends <a href="https://www.linkedin.com/in/mansoor-khan-a1b4101b9/">Mansoor</a>, <a href="https://www.linkedin.com/in/shaheer-khan-66a9251a7/">Shaheer</a>, <a href="https://www.linkedin.com/in/fatima-tuz-zahra-99b49b217/">Fatima</a>, and I—along with <a href="https://github.com/Sameer25-py">Sameer</a>, a senior dev from Tintash—set out to create a successor to Dungeon Survivor in just two weeks. With FYP presentations and tight deadlines, we faced plenty of challenges, especially with communication and time constraints. Despite the hurdles, we still managed to create a decent game with character, and it became a major learning experience. The Game Premise: An adventurer accidentally enters a forbidden dungeon and must solve timed puzzles to keep the torches lit and avoid being consumed by deadly beasts. Though we didn't make it past the selection phase for CPI testing, this project was a reminder that <strong>not everything I build will turn to gold</strong>, but each experience is a step forward in growth, teamwork, and adaptability. I worked on: 
+                    <div class="project-title-container">
+                        <h2 class="project-title">Dungeon Survivor 2 <a
+                                href="https://drive.google.com/file/d/18eAiWKnl7aET8-CcAD7tGz-TUr5hhT4L/view?usp=sharing"><img
+                                    src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9"
+                                    width="20" height="20" style="color: #028dff;"></a></h2>
+                        <h2 style="margin-top: 0;">March 2023</h2>
+                    </div>
+                    <p class="typewriter" style="white-space: pre-line">During Winter Game Jam 2023 by <a
+                            href="https://mlabs.co/">MLABS</a>, my friends <a
+                            href="https://www.linkedin.com/in/mansoor-khan-a1b4101b9/">Mansoor</a>, <a
+                            href="https://www.linkedin.com/in/shaheer-khan-66a9251a7/">Shaheer</a>, <a
+                            href="https://www.linkedin.com/in/fatima-tuz-zahra-99b49b217/">Fatima</a>, and I—along with <a href="https://github.com/Sameer25-py">Sameer</a>, a senior dev from Tintash—set out to create a successor to Dungeon Survivor in just two weeks. With FYP presentations and tight deadlines, we faced plenty of challenges, especially with communication and time constraints. Despite the hurdles, we still managed to create a decent game with character, and it became a major learning experience. The Game Premise: An adventurer accidentally enters a forbidden dungeon and must solve timed puzzles to keep the torches lit and avoid being consumed by deadly beasts. Though we didn't make it past the selection phase for CPI testing, this project was a reminder that <strong>not everything I build will turn to gold</strong>, but each experience is a step forward in growth, teamwork, and adaptability. I worked on:
 
-                    ➸ 🎮 Game Design & Project Management 
+                    ➸ 🎮 Game Design & Project Management
                     ➸ 🗺️ Level Design & Team Integration
                     ➸ 🕹️ Grid Movement, Doors & Switches, UI
                     </p>
@@ -406,17 +570,24 @@
                     </div>
                 </div>
                 <div class="video-container">
-                    <iframe src="https://youtube.com/embed/ltBw--wu8Ho?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    <iframe src="https://youtube.com/embed/ltBw--wu8Ho?loop=1&modestbranding=1&iv_load_policy=3"
+                        loading="lazy" allow="picture-in-picture" allowfullscreen>
                     </iframe>
                 </div>
             </section>
             <section class="project">
                 <div class="project-content">
-                    <div class="project-title-container"><h2 class="project-title">LegendEHR <a href="https://legendehr.com/"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2> <h2 style="margin-top: 0;">December 2022</h2></div>
+                    <div class="project-title-container">
+                        <h2 class="project-title">LegendEHR <a href="https://legendehr.com/"><img
+                                    src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9"
+                                    width="20" height="20" style="color: #028dff;"></a></h2>
+                        <h2 style="margin-top: 0;">December 2022</h2>
+                    </div>
                     <p class="typewriter" style="white-space: pre-line">This project was part of a larger team effort at <a href="https://risetech.ai/">RISETech</a>, where I built a 3D Model Viewer in Unity for a medical mobile and web app designed to assist doctors in clinical practice. Using a <strong>spherical coordinate system</strong>, I mapped touchscreen gestures to handle rotation, zoom, and pan functions seamlessly. Beyond navigation, we implemented:
 
                     ➸ 🩺 An annotation system using raycasts for precise note-taking on 3D models
-                    ➸ 🔍 An outlining system by dividing the mesh of patient models into segments for better visual clarity
+                    ➸ 🔍 An outlining system by dividing the mesh of patient models into segments for better visual
+                    clarity
 
                     The 3D models were developed by <a href="https://www.linkedin.com/in/mansoor-khan-a1b4101b9/">Mansoor</a>, while I focused on the Unity integration. To <strong>bridge Unity with Flutter</strong>, I developed an API with over 30 functions, handling everything from camera controls to annotation management. Each function was rigorously tested inside Unity, ensuring smooth two-way communication between the Flutter frontend and Unity backend. This project was an interesting mix of game dev, UI/UX design, and medical tech—a reminder that good engineering isn't about sticking to one domain but about making things work, no matter the field.
                     </p>
@@ -432,13 +603,17 @@
                     </div>
                 </div>
                 <div class="video-container">
-                    <iframe src="https://youtube.com/embed/nJKJdV3Dvoo?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    <iframe src="https://youtube.com/embed/nJKJdV3Dvoo?loop=1&modestbranding=1&iv_load_policy=3"
+                        loading="lazy" allow="picture-in-picture" allowfullscreen>
                     </iframe>
                 </div>
             </section>
             <section class="project">
                 <div class="project-content">
-                    <div class="project-title-container"><h2 class="project-title">Shape Race</h2> <h2 style="margin-top: 0;">Sep 2022</h2></div>
+                    <div class="project-title-container">
+                        <h2 class="project-title">Shape Race</h2>
+                        <h2 style="margin-top: 0;">Sep 2022</h2>
+                    </div>
                     <p class="typewriter">Shape Race was my ambitious attempt at launching a game on the Play Store and experimenting with the process. Did it make it there? Nope. But did I learn a ton along the way? Absolutely. At its core, Shape Race is a fast-paced arcade game where the speed ramps up the longer you play. Combine that with some hard turns and you've got a recipe for adrenaline-fueled chaos. Staying vigilant and reacting quickly is the only way to chase those high scores—and trust me, it gets intense. While working on this game, I dove headfirst into <strong>splines, object pooling, post-process effects</strong>, and crafting engaging player experiences. Each feature pushed my skills further, and though the game didn't hit the Play Store, it definitely left a mark on me.
                     </p>
                     <div class="tags-container">
@@ -451,13 +626,20 @@
                     </div>
                 </div>
                 <div class="video-container">
-                    <iframe src="https://youtube.com/embed/8PXjyWaylKE?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    <iframe src="https://youtube.com/embed/8PXjyWaylKE?loop=1&modestbranding=1&iv_load_policy=3"
+                        loading="lazy" allow="picture-in-picture" allowfullscreen>
                     </iframe>
                 </div>
             </section>
             <section class="project">
                 <div class="project-content">
-                    <div class="project-title-container"><h2 class="project-title">Combo Counter <a href="https://assetstore.unity.com/packages/tools/gui/combo-counter-system-217635"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2><h2 style="margin-top: 0;">June 2022</h2></div>
+                    <div class="project-title-container">
+                        <h2 class="project-title">Combo Counter <a
+                                href="https://assetstore.unity.com/packages/tools/gui/combo-counter-system-217635"><img
+                                    src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9"
+                                    width="20" height="20" style="color: #028dff;"></a></h2>
+                        <h2 style="margin-top: 0;">June 2022</h2>
+                    </div>
                     <p class="typewriter">Ever wanted to spice up your game with slick combo counters and satisfying text popups? Well, I did—so I built a small but mighty Unity plugin that does just that! This arcade-style combo system lets you integrate multi-phase combo counters with optional text popups to give players instant feedback (because who doesn't love seeing flashy numbers go up?). For smooth animations, it plays nicely with both <a href="https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676">DOTween</a> and <a href="https://assetstore.unity.com/packages/tools/animation/leantween-3595">LeanTween</a>—the two heavyweights of Unity tweening. At one point, I considered writing my own tweening library to ditch external dependencies... but then I remembered scope creep is real, and this was meant to be a simple tool, not a full-blown engine rewrite. Priorities, right? 😅
                     </p>
                     <div class="tags-container">
@@ -469,13 +651,17 @@
                     </div>
                 </div>
                 <div class="video-container">
-                    <iframe src="https://youtube.com/embed/CXJkAt24LaU?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    <iframe src="https://youtube.com/embed/CXJkAt24LaU?loop=1&modestbranding=1&iv_load_policy=3"
+                        loading="lazy" allow="picture-in-picture" allowfullscreen>
                     </iframe>
                 </div>
             </section>
             <section class="project">
                 <div class="project-content">
-                    <div class="project-title-container"><h2 class="project-title">VRM Batch Exporter</h2> <h2 style="margin-top: 0;">Dec 2021</h2></div>
+                    <div class="project-title-container">
+                        <h2 class="project-title">VRM Batch Exporter</h2>
+                        <h2 style="margin-top: 0;">Dec 2021</h2>
+                    </div>
                     <p class="typewriter">When a startup needed to automate the creation of NFT 3D avatars in VRM format, they ran into a problem—there weren't many tools out there for the job. So, they reached out to me, and I whipped up a handy little script (with a UI, so let's call it semi-fancy). At its core, it's a simple for-loop that reads any texture file from the resources folder and applies it to a rigged 3D avatar—either individually or in bulk. But hey, just because it's simple doesn't mean it isn't effective! The UI lets you tweak settings, making the whole process smoother and a lot more user-friendly. Since VRM is a niche format, this was a fun challenge to figure out. If you want to see it in action, check out the video for a live demo of the generated avatars!</p>
                     <div class="tags-container">
                         <span class="tag tag-unity">Unity</span>
@@ -486,16 +672,23 @@
                     </div>
                 </div>
                 <div class="video-container">
-                    <iframe src="https://youtube.com/embed/BqE6-co8o8E?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    <iframe src="https://youtube.com/embed/BqE6-co8o8E?loop=1&modestbranding=1&iv_load_policy=3"
+                        loading="lazy" allow="picture-in-picture" allowfullscreen>
                     </iframe>
                 </div>
             </section>
             <section class="project">
                 <div class="project-content">
-                    <div class="project-title-container"><h2 class="project-title">Rock, Paper, Scissors <a href="https://drive.google.com/file/d/1QWHYMfvdK5Mvr34Yp15mtbh9OLpp2JCD/view"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2> <h2 style="margin-top: 0;">July 2021</h2></div>
-                    <p class="typewriter" style="white-space: pre-line">During the final four weeks of my internship at <a href="http://www.mlabs.co/game-jams/rookie-game-jam-2021/">MLABS</a>, I took part in an intense game jam with over 300 participants—and what a wild ride it was! 🚀 From late-night brainstorming sessions to rapid prototyping, my team and I poured everything into bringing our idea to life. I naturally stepped into the role of group leader, working alongside my incredibly talented teammates, <a href="https://www.linkedin.com/in/aiyan-humayun">Aiyan</a> and <a href="https://www.linkedin.com/in/hajra-afzal-71b2601a4/">Hajra</a>. Thanks to our collective effort, we built our game swiftly and effectively, balancing creativity with execution. The submissions were judged on design and implementation (50%) and a marketing test (50%), where each game's Cost Per Install (CPI) was measured using a $150 ad budget. Not only did our game excel in both categories, but we also won the competition, earning the "<a href="https://www.linkedin.com/posts/mindstorm-studios_mindstormstudios-rookiegamejam2021-mlabs-activity-6861265000405725184-uZDn">Rookies of the Year</a>" title! 🏆 It was an unforgettable experience that reinforced my love for game development, teamwork, and making ideas come to life under pressure. My contributions included:
-                    
-                    ➸ 🎮 Game Design & Project Management 
+                    <div class="project-title-container">
+                        <h2 class="project-title">Rock, Paper, Scissors <a
+                                href="https://drive.google.com/file/d/1QWHYMfvdK5Mvr34Yp15mtbh9OLpp2JCD/view"><img
+                                    src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9"
+                                    width="20" height="20" style="color: #028dff;"></a></h2>
+                        <h2 style="margin-top: 0;">July 2021</h2>
+                    </div>
+                    <p class="typewriter" style="white-space: pre-line">During the final four weeks of my internship at <a href="http://www.mlabs.co/game-jams/rookie-game-jam-2021/">MLABS</a>, I took part in an intense game jam with over 300 participants—and what a wild ride it was! 🚀 From late-night brainstorming sessions to rapid prototyping, my team and I poured everything into bringing our idea to life. I naturally stepped into the role of group leader, working alongside my incredibly talented teammates, <a href="https://www.linkedin.com/in/aiyan-humayun">Aiyan</a> and <a     href="https://www.linkedin.com/in/hajra-afzal-71b2601a4/">Hajra</a>. Thanks to our collective effort, we built our game swiftly and effectively, balancing creativity with execution. The submissions were judged on design and implementation (50%) and a marketing test (50%), where each game's Cost Per Install (CPI) was measured using a $150 ad budget. Not only did our game excel in both categories, but we also won the competition, earning the "<a href="https://www.linkedin.com/posts/mindstorm-studios_mindstormstudios-rookiegamejam2021-mlabs-activity-6861265000405725184-uZDn">Rookies of the Year</a>" title! 🏆 It was an unforgettable experience that reinforced my love for game development, teamwork, and making ideas come to life under pressure. My contributions included:
+
+                    ➸ 🎮 Game Design & Project Management
                     ➸ 🎨 Level Design & Hand Animations
                     ➸ ⚙️ Event Systems, Player & NPC Controllers
                     </p>
@@ -508,13 +701,20 @@
                     </div>
                 </div>
                 <div class="video-container">
-                    <iframe src="https://youtube.com/embed/f3kR06nOX-o?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    <iframe src="https://youtube.com/embed/f3kR06nOX-o?loop=1&modestbranding=1&iv_load_policy=3"
+                        loading="lazy" allow="picture-in-picture" allowfullscreen>
                     </iframe>
                 </div>
             </section>
             <section class="project">
                 <div class="project-content">
-                    <div class="project-title-container"><h2 class="project-title">Dungeon Survivor <a href="https://drive.google.com/file/d/179IqLBQJEzV1kGWKQYyDP-jsffuWY6aH/view"><img src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9" width="20" height="20" style="color: #028dff;" ></a></h2> <h2 style="margin-top: 0;">Nov 2020</h2></div>
+                    <div class="project-title-container">
+                        <h2 class="project-title">Dungeon Survivor <a
+                                href="https://drive.google.com/file/d/179IqLBQJEzV1kGWKQYyDP-jsffuWY6aH/view"><img
+                                    src="https://img.icons8.com/?size=100&id=hUqP035cA2Bd&format=png&color=3100e9"
+                                    width="20" height="20" style="color: #028dff;"></a></h2>
+                        <h2 class="project-title" style="margin-top: 0;">Nov 2020</h2>
+                    </div>
                     <p class="typewriter">I built this game from <strong>scratch!</strong> (well, aside from the textures, models, and music) as a semester project for my Computer Graphics course. It was during the COVID lockdown, so naturally, I spent an entire month doing nothing but working on this game—because what else was there to do? 😅 My goal was to recreate the movement mechanics from an old classic, Wonderland: Secret Worlds. I started with Unity's physics system—colliders, rigidbodies, the whole deal—only to quickly realize physics had other plans. The movement was unpredictable, janky, and just plain wrong. So, I did what any determined (or slightly stubborn) developer would do—I scrapped everything and rebuilt it from the ground up using C# arrays. Looking back, my code was... well, let's just say it violated several coding standards and possibly a few laws of nature. But this project was a major stepping stone in my journey. It taught me problem-solving, iteration, and the art of knowing when to throw your code in the trash and start over. And for that, I'm still proud of it.
                     </p>
                     <div class="tags-container">
@@ -525,16 +725,209 @@
                     </div>
                 </div>
                 <div class="video-container">
-                    <iframe src="https://youtube.com/embed/jQCHvo8fi4o?loop=1&modestbranding=1&iv_load_policy=3" loading="lazy" allow="picture-in-picture" allowfullscreen>
+                    <iframe src="https://youtube.com/embed/jQCHvo8fi4o?loop=1&modestbranding=1&iv_load_policy=3"
+                        loading="lazy" allow="picture-in-picture" allowfullscreen>
                     </iframe>
                 </div>
             </section>
             <section style="background-color: #f7f4ed; margin: 20px; padding: 20px; border-radius: 15px;">
-                <h2 class="project-title" style="font-family:'Segoe UI';">Specialization Certificates</h2>
+                <h2 class="project-title" style="font-family:'Segoe UI';">Certificates and Other Work</h2>
                 <div style="white-space: pre-line">
-                    ➸ <a href="https://coursera.org/share/fc3ce1babdfd089f91ad2f0acdff2c99">C# Programming for Unity Game Development</a> by UCS (University of Colorado System)
-                    ➸ <a href="https://coursera.org/share/3fe2a3c3e8bbbae08c248f6f5a45a7eb">Game Design: Art and Concepts</a> by CalArts (California Institute of the Arts)
+                    ➸ <a href="https://coursera.org/share/fc3ce1babdfd089f91ad2f0acdff2c99">C# Programming for Unity Game Development</a> Specialization (4 Courses) by UCS (University of Colorado System) (2020)
+                    ➸ <a href="https://coursera.org/share/3fe2a3c3e8bbbae08c248f6f5a45a7eb">Game Design: Art and Concepts</a> Specialization (5 Courses) by CalArts (California Institute of the Arts) (2020)
+                    ➸ <a href="https://www.instagram.com/p/DJjGzQoM8qQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D&img_index=5">Judge in AR, VR & Gaming Category</a> COMPPEC (Computer Project Exhibition & Competition) NUST (2025)
+                    ➸ <a href="https://www.credential.net/b579a97e-ceb2-47bd-bb75-6a55f8787a31">Technical Reviewer, SME (Subject Matter Expert)</a> C# & Unity Developer Certification, GameDevHQ, AKYLADE (2025)
                 </div>
+            </section>
+            <section style="background-color: #f7f4ed; margin: 20px; padding: 20px; border-radius: 15px;">
+                <h2 class="project-title" style="font-family:'Segoe UI';">My Favorite Games to Play</h2>
+                <div id="game-collection-controls"
+                    style="display: flex; flex-wrap: wrap; align-items: center; gap: 15px; margin-bottom: 15px;">
+                    <div id="genre-tabs" style="display: flex; flex-wrap: wrap; gap: 8px;"></div>
+                    <div style="margin-left: auto;">
+                        <label for="sort-select" style="font-size: 15px; color: #23272e; font-weight: 600;">Sort
+                            by:</label>
+                        <select id="sort-select"
+                            style="padding: 4px 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 15px;">
+                            <option value="alpha">Alphabetical</option>
+                            <option value="new-to-old" selected>Release Year: New to Old</option>
+                            <option value="old-to-new">Release Year: Old to New</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="game-collection-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 0.2fr)); gap: 18px;">
+                </div>
+                <script>
+                    const games = [
+                        { title: "Altered Beast", image: "assets/covers/altered-beast.webp", release: "1988", genres: ["Arcade", "Platformer"] },
+                        { title: "Batman: Arkham Knight", image: "assets/covers/batman-arkham-knight.webp", release: "2015", genres: ["Adventure"] },
+                        { title: "Beyblade G-Revolution", image: "assets/covers/beyblade-grev.webp", release: "2004", genres: ["Adventure", "Anime"] },
+                        { title: "Baldur's Gate 3", image: "assets/covers/bg3.webp", release: "2023", genres: ["RPG", "Adventure", "Turn-Based", "Fantasy"] },
+                        { title: "Bomberman Tournament", image: "assets/covers/bomberman-tournament.webp", release: "2001", genres: ["Puzzle"] },
+                        { title: "Bonkheads", image: "assets/covers/bonkheads.webp", release: "1997", genres: ["Arcade", "Platformer"] },
+                        { title: "Burnout Paradise", image: "assets/covers/burnout-paradise.webp", release: "2008", genres: ["Racing", "Arcade"] },
+                        { title: "Chicken Invaders 4", image: "assets/covers/chicken-invaders4.webp", release: "2010", genres: ["Arcade", "Shoot 'em up"] },
+                        { title: "Cities: Skyline", image: "assets/covers/cities-skyline.webp", release: "2015", genres: ["Simulation"] },
+                        { title: "Civilization V", image: "assets/covers/civ5.webp", release: "2010", genres: ["Simulation", "Turn-Based"] },
+                        { title: "Clash of Clans", image: "assets/covers/clash-of-clans.webp", release: "2012", genres: ["Simulation", "Mobile", "Multiplayer"] },
+                        { title: "Clash Royale", image: "assets/covers/clash-royale.webp", release: "2016", genres: ["Mobile", "Multiplayer"] },
+                        { title: "Call of Duty 4: Modern Warfare", image: "assets/covers/cod4.webp", release: "2007", genres: ["Shooter", "Multiplayer"] },
+                        { title: "Commandos: Behind Enemy Lines", image: "assets/covers/commandos.webp", release: "1998", genres: ["Simulation"] },
+                        { title: "Counter-Strike 1.6", image: "assets/covers/cs1-6.webp", release: "2000", genres: ["Shooter", "Multiplayer"] },
+                        { title: "Counter-Strike 2", image: "assets/covers/cs2.webp", release: "2023", genres: ["Shooter", "Multiplayer"] },
+                        { title: "DBZ: Budokai Tenkaichi 3", image: "assets/covers/dbz-budokaitenkaichi3.webp", release: "2007", genres: ["Fighting", "Anime"] },
+                        { title: "DBZ: The Legacy of Goku", image: "assets/covers/dbz-legacy-of-goku.webp", release: "2004", genres: ["Adventure", "Anime"] },
+                        { title: "Detroit: Become Human", image: "assets/covers/detroit-become-human.webp", release: "2018", genres: ["Narrative", "RPG"] },
+                        { title: "Diner Dash", image: "assets/covers/diner-dash.webp", release: "2003", genres: ["Arcade", "Simulation", "Casual"] },
+                        { title: "DOOM II", image: "assets/covers/doom2.webp", release: "1994", genres: ["Shooter"] },
+                        { title: "Earn to Die", image: "assets/covers/earn2die.webp", release: "2014", genres: ["Simulation", "Arcade"] },
+                        { title: "Fallout 4", image: "assets/covers/fallout4.webp", release: "2015", genres: ["RPG", "Adventure"] },
+                        { title: "Faster Than Light (FTL)", image: "assets/covers/faster-than-light.webp", release: "2012", genres: ["Simulation", "Roguelike"] },
+                        { title: "Feeding Frenzy", image: "assets/covers/feeding-frenzy.webp", release: "2004", genres: ["Casual"] },
+                        { title: "Game Dev Tycoon", image: "assets/covers/game-dev-tycoon.webp", release: "2012", genres: ["Simulation", "Mobile"] },
+                        { title: "Gangsters 2", image: "assets/covers/gangsters2.webp", release: "2001", genres: ["RPG", "Simulation"] },
+                        { title: "Golden Axe", image: "assets/covers/golden-axe.webp", release: "1989", genres: ["Arcade"] },
+                        { title: "Hades", image: "assets/covers/hades.webp", release: "2020", genres: ["Roguelike", "RPG"] },
+                        { title: "Harry Potter", image: "assets/covers/harry-potter.webp", release: "2001 - 2007", genres: ["Narrative", "Fantasy"] },
+                        { title: "Heavy Weapon", image: "assets/covers/heavy-weapon.webp", release: "2005", genres: ["Arcade", "Shoot 'em up"] },
+                        { title: "Icy Tower", image: "assets/covers/icy-tower.webp", release: "2001", genres: ["Arcade", "Platformer"] },
+                        { title: "Insaniquarium", image: "assets/covers/insaniquarium.webp", release: "2004", genres: ["Casual", "Simulation"] },
+                        { title: "Lemonade Tycoon", image: "assets/covers/lemonade-tycoon.webp", release: "2002", genres: ["Simulation"] },
+                        { title: "Metal Slug", image: "assets/covers/metal-slug.webp", release: "1996", genres: ["Arcade", "Shoot 'em up", "Platformer"] },
+                        { title: "Midtown Madness", image: "assets/covers/midtown-madness.webp", release: "1999", genres: ["Racing", "Arcade"] },
+                        { title: "Mobile Legends", image: "assets/covers/mobile-legends.webp", release: "2016", genres: ["MOBA", "Multiplayer"] },
+                        { title: "Mount & Blade: Warband", image: "assets/covers/mount&blade-warband.webp", release: "2010", genres: ["RPG", "Simulation"] },
+                        { title: "Naruto Shippuden: Ultimate Ninja 5", image: "assets/covers/naruto-ultimate-ninja-5.webp", release: "2007", genres: ["Fighting", "Anime", "Adventure"] },
+                        { title: "Naruto Ultimate Ninja Storm Connections", image: "assets/covers/naruto-ultimate-ninja-storm-connections.webp", release: "2023", genres: ["Fighting", "Anime"] },
+                        { title: "Neighbours from Hell", image: "assets/covers/neighbors-from-hell.webp", release: "2003", genres: ["Puzzle", "Simulation"] },
+                        { title: "Neon Abyss", image: "assets/covers/neon-abyss.webp", release: "2020", genres: ["Roguelike", "Platformer"] },
+                        { title: "Need for Speed: Most Wanted (Remake)", image: "assets/covers/nfs-mostwanted-remake.webp", release: "2012", genres: [] },
+                        { title: "Need for Speed: Most Wanted", image: "assets/covers/nfs-mostwanted.webp", release: "2005", genres: ["Racing"] },
+                        { title: "Need for Speed: Rivals", image: "assets/covers/nfs-rivals.webp", release: "2013", genres: ["Racing"] },
+                        { title: "Need for Speed: The Run", image: "assets/covers/nfs-the-run.webp", release: "2011", genres: ["Racing", "Narrative"] },
+                        { title: "Need for Speed: Underground 2", image: "assets/covers/nfs-underground2.webp", release: "2004", genres: ["Racing"] },
+                        { title: "Need for Speed II", image: "assets/covers/nfs2.webp", release: "1997", genres: ["Racing", "Arcade"] },
+                        { title: "Paperboy", image: "assets/covers/paperboy.webp", release: "1985", genres: ["Arcade"] },
+                        { title: "Pitfall!", image: "assets/covers/pitfall.webp", release: "1982", genres: ["Platformer", "Adventure"] },
+                        { title: "Plants vs. Zombies", image: "assets/covers/plants-vs-zombies.webp", release: "2009", genres: ["Simulation", "Casual"] },
+                        { title: "Pokémon Crystal", image: "assets/covers/pokemon-crystal.webp", release: "2000", genres: ["RPG", "Adventure", "Anime"] },
+                        { title: "Pokémon Emerald", image: "assets/covers/pokemon-emrald.webp", release: "2004", genres: ["RPG", "Adventure", "Anime"] },
+                        { title: "Pokémon FireRed", image: "assets/covers/pokemon-firered.webp", release: "2004", genres: ["RPG", "Adventure", "Anime"] },
+                        { title: "Pokkén Tournament", image: "assets/covers/pokken-tournament.webp", release: "2015", genres: ["Fighting", "Anime", "Party"] },
+                        { title: "Populous II", image: "assets/covers/populas2.webp", release: "1991", genres: ["Simulation"] },
+                        { title: "Portal", image: "assets/covers/portal.webp", release: "2007", genres: ["Puzzle", "Adventure"] },
+                        { title: "Command & Conquer: Red Alert 2", image: "assets/covers/red-alert2.webp", release: "2000", genres: ["Simulation"] },
+                        { title: "Road Rash", image: "assets/covers/road-rash.webp", release: "1991", genres: ["Racing", "Arcade"] },
+                        { title: "Runbow", image: "assets/covers/runbow.webp", release: "2015", genres: ["Platformer", "Party"] },
+                        { title: "Sekiro: Shadows Die Twice", image: "assets/covers/sekiro.webp", release: "2019", genres: ["Adventure", "RPG"] },
+                        { title: "The Elder Scrolls V: Skyrim", image: "assets/covers/skyrim.webp", release: "2011", genres: ["RPG", "Adventure", "Fantasy"] },
+                        { title: "Snow Bros", image: "assets/covers/snow-brothers.webp", release: "1990", genres: ["Arcade", "Platformer"] },
+                        { title: "Spider-Man 2", image: "assets/covers/spiderman2.webp", release: "2004", genres: ["Adventure"] },
+                        { title: "Stardew Valley", image: "assets/covers/stardew-valley.webp", release: "2016", genres: ["Simulation", "RPG", "Adventure"] },
+                        { title: "Stranded II", image: "assets/covers/stranded2.webp", release: "2007", genres: ["RPG", "Adventure"] },
+                        { title: "Super Mario 3D World", image: "assets/covers/super-mario-3d-world.webp", release: "2013", genres: ["Arcade", "Platformer", "Party"] },
+                        { title: "New Super Mario Bros. U", image: "assets/covers/super-mario-bros-u.webp", release: "2012", genres: ["Arcade", "Platformer", "Party"] },
+                        { title: "Tekken 5", image: "assets/covers/tekken5.webp", release: "2004", genres: ["Arcade", "Fighting", "Party"] },
+                        { title: "The Finals", image: "assets/covers/the-finals.webp", release: "2023", genres: ["Shooter", "Multiplayer"] },
+                        { title: "The House of the Dead", image: "assets/covers/the-house-of-the-dead.webp", release: "1996", genres: ["Shoot 'em up", "Arcade"] },
+                        { title: "The Lion King", image: "assets/covers/the-lion-king.webp", release: "1994", genres: ["Adventure", "Platformer"] },
+                        { title: "The Outer Worlds", image: "assets/covers/the-outer-worlds.webp", release: "2019", genres: ["RPG", "Adventure"] },
+                        { title: "The Sims", image: "assets/covers/the-sims.webp", release: "2000 - 2014", genres: ["Simulation"] },
+                        { title: "The Urbz: Sims in the City", image: "assets/covers/the-urbz-sims-in-the-city.webp", release: "2004", genres: ["Simulation", "Adventure"] },
+                        { title: "Theme Park", image: "assets/covers/theme-park.webp", release: "2001", genres: ["Simulation"] },
+                        { title: "Tiny Glade", image: "assets/covers/tiny-glade.webp", release: "2024", genres: ["Simulation"] },
+                        { title: "Tomb Raider", image: "assets/covers/tomb-raider-2013.webp", release: "2013", genres: ["Adventure", "Narrative"] },
+                        { title: "Tomb Raider Classics", image: "assets/covers/tomb-raider.webp", release: "1997 - 2007", genres: ["Adventure", "Platformer"] },
+                        { title: "Treasures of Montezuma", image: "assets/covers/treasures-of-montezuma.webp", release: "2010", genres: ["Puzzle", "Casual"] },
+                        { title: "Valorant", image: "assets/covers/valorant.webp", release: "2020", genres: ["Shooter", "Multiplayer"] },
+                        { title: "Virtua Cop 2", image: "assets/covers/virtua-cop2.webp", release: "", genres: ["Shoot 'em up", "Arcade"] },
+                        { title: "Virtual Villagers 4: The Tree of Life", image: "assets/covers/virtual-villagers.webp", release: "2010", genres: ["Simulation"] },
+                        { title: "Wii Sports Resort", image: "assets/covers/wii-sports-resort.webp", release: "2009", genres: ["Party"] },
+                        { title: "The Witcher 3: Wild Hunt", image: "assets/covers/witcher3.webp", release: "2015", genres: ["RPG", "Adventure"] },
+                        { title: "Worms 2", image: "assets/covers/worms2.webp", release: "1997", genres: ["Simulation", "Party"] }
+                    ];
+
+
+                    const allGenres = Array.from(new Set(games.flatMap(g => g.genres))).sort();
+                    const genreTabs = ["All", ...allGenres];
+                    let currentGenre = "All";
+                    let currentSort = "new-to-old";
+
+                    function getSortYear(release) {
+                        // Accepts '1997', '1997-2007', '1997 to 2007', etc.
+                        if (typeof release !== 'string') return 0;
+                        let match = release.match(/\d{4}/);
+                        return match ? parseInt(match[0], 10) : 0;
+                    }
+
+                    function renderTabs() {
+                        const tabs = document.getElementById('genre-tabs');
+                        tabs.innerHTML = '';
+                        genreTabs.forEach(genre => {
+                            const btn = document.createElement('button');
+                            btn.textContent = genre;
+                            btn.className = 'genre-tab' + (currentGenre === genre ? ' active' : '');
+                            btn.style = `padding: 6px 16px; border-radius: 20px; border: none; background: ${currentGenre === genre ? '#23272e' : '#e6e6e6'}; color: ${currentGenre === genre ? '#fff' : '#23272e'}; font-weight: 600; cursor: pointer; font-size: 15px; margin-bottom: 2px;`;
+                            btn.onclick = () => { currentGenre = genre; renderTabs(); renderGrid(); };
+                            tabs.appendChild(btn);
+                        });
+                    }
+
+                    function renderGrid() {
+                        let filtered = currentGenre === "All" ? games : games.filter(g => g.genres.includes(currentGenre));
+                        const sortValue = document.getElementById('sort-select').value;
+                        if (sortValue === "old-to-new") {
+                            filtered = filtered.slice().sort((a, b) => getSortYear(a.release) - getSortYear(b.release));
+                        } else if (sortValue === "new-to-old") {
+                            filtered = filtered.slice().sort((a, b) => getSortYear(b.release) - getSortYear(a.release));
+                        } else if (sortValue === "alpha") {
+                            filtered = filtered.slice().sort((a, b) => a.title.localeCompare(b.title));
+                        }
+                        const grid = document.getElementById('game-collection-grid');
+                        grid.innerHTML = '';
+                        filtered.forEach(game => {
+                            const item = document.createElement('div');
+                            item.className = 'game-item';
+                            item.style = 'position: relative; aspect-ratio: 3/4; background: #23272e; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.13); cursor: pointer;';
+                            const img = document.createElement('img');
+                            img.src = game.image;
+                            img.alt = game.title;
+                            img.style = 'width: 100%; height: 100%; object-fit: cover; display: block;';
+                            // Overlay
+                            const overlay = document.createElement('div');
+                            overlay.className = 'game-overlay';
+                            overlay.style = `position: absolute; inset: 0; background: rgba(30,30,30,0.88); color: #fff; opacity: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 18px 8px 8px 8px; transition: opacity 0.2s; text-align: center; pointer-events: none;`;
+                            overlay.innerHTML = `<div style='font-size: 1.1em; font-weight: 700; margin-bottom: 7px;'>${game.title}</div>
+                                            <div style='font-size: 0.95em; margin-bottom: 7px;'>${game.release}</div>
+                                            <div style='display: flex; flex-wrap: wrap; gap: 5px; justify-content: center;'>${game.genres.map(g => `<span class='tag' style='background: #4b79c6; color: #fff; font-size: 12px; padding: 3px 10px; border-radius: 12px;'>${g}</span>`).join('')}</div>`;
+                            // Show overlay on hover/focus/tap
+                            item.onmouseenter = () => overlay.style.opacity = 1;
+                            item.onmouseleave = () => overlay.style.opacity = 0;
+                            item.onfocus = () => overlay.style.opacity = 1;
+                            item.onblur = () => overlay.style.opacity = 0;
+                            // Touch support
+                            let tapped = false;
+                            item.ontouchstart = e => {
+                                if (!tapped) {
+                                    overlay.style.opacity = 1;
+                                    tapped = true;
+                                    setTimeout(() => tapped = false, 1200);
+                                    e.preventDefault();
+                                }
+                            };
+                            item.appendChild(img);
+                            item.appendChild(overlay);
+                            grid.appendChild(item);
+                        });
+                    }
+
+                    document.getElementById('sort-select').addEventListener('change', function () {
+                        renderGrid();
+                    });
+                    renderTabs();
+                    renderGrid();
+                </script>
             </section>
         </section>
     </main>
@@ -542,17 +935,18 @@
         <img src="https://img.icons8.com/?size=100&id=41199&format=png&color=f7f4ed" style="height: 40px;">
     </button>
     <script>
-    window.addEventListener("scroll", function() {
-      const btn = document.getElementById("scrollToTopBtn");
-      if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-        btn.classList.add("visible");
-      } else {
-        btn.classList.remove("visible");
-      }
-    });
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+        window.addEventListener("scroll", function () {
+            const btn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                btn.classList.add("visible");
+            } else {
+                btn.classList.remove("visible");
+            }
+        });
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     </script>
 </body>
+
 </html>
